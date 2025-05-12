@@ -1,0 +1,399 @@
+/* Main Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f7;
+    color: #333;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    min-height: 100vh;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+
+.logo-container {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
+}
+
+.nav-link {
+    color: #bbb;
+    padding: 12px 20px;
+    margin: 5px 0;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid #4CAF50;
+}
+
+.nav-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.help-section {
+    margin-top: auto;
+    padding: 15px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.help-section i {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #4CAF50;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px 30px;
+    background-color: #f0f4f7;
+}
+
+header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.page-title h1 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+}
+
+/* Cards */
+.card {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Mini Cards */
+.condition-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.mini-card {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mini-card-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background-color: rgba(76, 175, 80, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4CAF50;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.mini-card-content h5 {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.value-indicator {
+    display: flex;
+    align-items: center;
+}
+
+.value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.status {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.status.good {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+}
+
+.status.high {
+    background-color: rgba(255, 152, 0, 0.1);
+    color: #FF9800;
+}
+
+.status.low {
+    background-color: rgba(33, 150, 243, 0.1);
+    color: #2196F3;
+}
+
+/* Field Map */
+.field-map {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.field-svg {
+    background-color: #e9f5db;
+    display: block;
+}
+
+.field-controls {
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+/* Prediction Form */
+.input-card label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-text {
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+/* Prediction Results */
+.prediction-result {
+    padding: 20px;
+}
+
+.result-icon {
+    color: #4CAF50;
+}
+
+.crop-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4CAF50;
+    margin: 10px 0 20px;
+}
+
+.no-prediction {
+    padding: 30px;
+}
+
+.placeholder-image {
+    color: #ddd;
+}
+
+/* Crop List */
+.crop-list {
+    margin-top: 20px;
+}
+
+.crop-item {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.crop-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.crop-icon {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.crop-name {
+    font-weight: 600;
+}
+
+/* Crop Detail Page */
+.nutrient-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: 2px solid #4CAF50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.nutrient-circle .value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1;
+}
+
+.nutrient-circle .unit {
+    font-size: 0.7rem;
+}
+
+.nutrient-name {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.growing-conditions {
+    margin-top: 15px;
+}
+
+.condition-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.condition-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: rgba(76, 175, 80, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4CAF50;
+    margin-right: 15px;
+}
+
+.condition-name {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.condition-value {
+    font-weight: 600;
+}
+
+.npk-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.npk-label {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.npk-value {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 8px;
+    border-radius: 10px;
+}
+
+.uses-list {
+    padding-left: 20px;
+}
+
+.uses-list li {
+    margin-bottom: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+        position: static;
+    }
+    
+    .main-content {
+        padding: 15px;
+    }
+    
+    .mini-card {
+        margin-bottom: 10px;
+    }
+    
+    .crop-name {
+        font-size: 1.5rem;
+    }
+}
+
+/* Footer */
+footer {
+    color: #777;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}

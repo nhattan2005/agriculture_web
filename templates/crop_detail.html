@@ -1,0 +1,361 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ crop_name|capitalize }} Information{% endblock %}
+
+{% block page_title %}Crop Detail: {{ crop_name|capitalize }}{% endblock %}
+
+{% block content %}
+<div class="crop-detail-page">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="crop-image text-center mb-3">
+                        <div id="crop-svg-container">
+                            <!-- SVG will be loaded here based on crop type -->
+                        </div>
+                    </div>
+                    
+                    <h3 class="card-title text-center">{{ crop_name|capitalize }}</h3>
+                    
+                    <div class="crop-nutrients mb-4">
+                        <div class="row">
+                            <div class="col-4 text-center">
+                                <div class="nutrient-circle">
+                                    <span class="value" id="fats-value">--</span>
+                                    <span class="unit">%</span>
+                                </div>
+                                <div class="nutrient-name">Fats</div>
+                            </div>
+                            
+                            <div class="col-4 text-center">
+                                <div class="nutrient-circle">
+                                    <span class="value" id="proteins-value">--</span>
+                                    <span class="unit">%</span>
+                                </div>
+                                <div class="nutrient-name">Proteins</div>
+                            </div>
+                            
+                            <div class="col-4 text-center">
+                                <div class="nutrient-circle">
+                                    <span class="value" id="carbs-value">--</span>
+                                    <span class="unit">%</span>
+                                </div>
+                                <div class="nutrient-name">Carbs</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="actions text-center mt-4">
+                        <a href="{{ url_for('predict') }}" class="btn btn-outline-success">
+                            <i class="fas fa-leaf"></i> Check If Suitable
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h4 class="card-title">Growing Conditions</h4>
+                    
+                    <div class="growing-conditions">
+                        <div class="condition-item">
+                            <div class="condition-icon">
+                                <i class="fas fa-thermometer-half"></i>
+                            </div>
+                            <div class="condition-details">
+                                <div class="condition-name">Temperature</div>
+                                <div class="condition-value" id="temp-range">--</div>
+                            </div>
+                        </div>
+                        
+                        <div class="condition-item">
+                            <div class="condition-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="condition-details">
+                                <div class="condition-name">Humidity</div>
+                                <div class="condition-value" id="humidity-range">--</div>
+                            </div>
+                        </div>
+                        
+                        <div class="condition-item">
+                            <div class="condition-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="condition-details">
+                                <div class="condition-name">pH Level</div>
+                                <div class="condition-value" id="ph-range">--</div>
+                            </div>
+                        </div>
+                        
+                        <div class="condition-item">
+                            <div class="condition-icon">
+                                <i class="fas fa-cloud-rain"></i>
+                            </div>
+                            <div class="condition-details">
+                                <div class="condition-name">Rainfall</div>
+                                <div class="condition-value" id="rainfall-range">--</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">About {{ crop_name|capitalize }}</h3>
+                    
+                    <div class="crop-description mb-4" id="crop-description">
+                        Loading description...
+                    </div>
+                    
+                    <h4>Soil Requirements</h4>
+                    <div class="soil-requirements mb-4" id="soil-requirements">
+                        Loading soil requirements...
+                    </div>
+                    
+                    <h4>NPK Requirements</h4>
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <div class="npk-card">
+                                <div class="npk-label">Nitrogen (N)</div>
+                                <div class="npk-value" id="n-value">--</div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" id="n-progress" role="progressbar" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="npk-card">
+                                <div class="npk-label">Phosphorus (P)</div>
+                                <div class="npk-value" id="p-value">--</div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" id="p-progress" role="progressbar" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="npk-card">
+                                <div class="npk-label">Potassium (K)</div>
+                                <div class="npk-value" id="k-value">--</div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" id="k-progress" role="progressbar" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>Growing Season</h4>
+                    <div class="growing-season mb-4" id="growing-season">
+                        Loading growing season information...
+                    </div>
+                    
+                    <h4>Average Yield</h4>
+                    <div class="yield-info mb-4" id="yield-info">
+                        Loading yield information...
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Common Uses</h4>
+                            <ul class="uses-list" id="uses-list">
+                                <li>Loading uses...</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <h4>Market Value</h4>
+                            <div class="market-value" id="market-value">
+                                Loading market value information...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load crop information
+        loadCropInfo('{{ crop_name }}');
+        
+        // Load appropriate SVG based on crop
+        loadCropSvg('{{ crop_name }}');
+    });
+    
+    function loadCropInfo(cropName) {
+        fetch('/static/data/crop_info.json')
+            .then(response => response.json())
+            .then(data => {
+                const cropInfo = data.find(crop => crop.name.toLowerCase() === cropName.toLowerCase());
+                
+                if (cropInfo) {
+                    // Update nutritional information
+                    document.getElementById('fats-value').textContent = cropInfo.nutrients.fats || '--';
+                    document.getElementById('proteins-value').textContent = cropInfo.nutrients.proteins || '--';
+                    document.getElementById('carbs-value').textContent = cropInfo.nutrients.carbs || '--';
+                    
+                    // Update growing conditions
+                    document.getElementById('temp-range').textContent = cropInfo.growingConditions.temperature || '--';
+                    document.getElementById('humidity-range').textContent = cropInfo.growingConditions.humidity || '--';
+                    document.getElementById('ph-range').textContent = cropInfo.growingConditions.ph || '--';
+                    document.getElementById('rainfall-range').textContent = cropInfo.growingConditions.rainfall || '--';
+                    
+                    // Update description and requirements
+                    document.getElementById('crop-description').textContent = cropInfo.description;
+                    document.getElementById('soil-requirements').textContent = cropInfo.soilRequirements;
+                    document.getElementById('growing-season').textContent = cropInfo.growingSeason;
+                    document.getElementById('yield-info').textContent = cropInfo.yield;
+                    
+                    // Update NPK values
+                    document.getElementById('n-value').textContent = cropInfo.npkRequirements.n + ' kg/ha';
+                    document.getElementById('p-value').textContent = cropInfo.npkRequirements.p + ' kg/ha';
+                    document.getElementById('k-value').textContent = cropInfo.npkRequirements.k + ' kg/ha';
+                    
+                    // Update progress bars (assuming 100 kg/ha is max)
+                    const maxNpk = 150;
+                    document.getElementById('n-progress').style.width = `${(cropInfo.npkRequirements.n / maxNpk) * 100}%`;
+                    document.getElementById('p-progress').style.width = `${(cropInfo.npkRequirements.p / maxNpk) * 100}%`;
+                    document.getElementById('k-progress').style.width = `${(cropInfo.npkRequirements.k / maxNpk) * 100}%`;
+                    
+                    // Update uses list
+                    const usesList = document.getElementById('uses-list');
+                    usesList.innerHTML = '';
+                    cropInfo.uses.forEach(use => {
+                        const li = document.createElement('li');
+                        li.textContent = use;
+                        usesList.appendChild(li);
+                    });
+                    
+                    // Update market value
+                    document.getElementById('market-value').textContent = cropInfo.marketValue;
+                } else {
+                    // Handle case where crop info is not found
+                    document.getElementById('crop-description').textContent = 
+                        'Detailed information about this crop is not available yet.';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching crop info:', error);
+                document.getElementById('crop-description').textContent = 
+                    'Unable to load crop information at this time.';
+            });
+    }
+    
+    function loadCropSvg(cropName) {
+        const svgContainer = document.getElementById('crop-svg-container');
+        
+        // Simple SVG representations for different crops
+        // These would be better as separate SVG files in a real app
+        switch(cropName.toLowerCase()) {
+            case 'wheat':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Wheat stalk -->
+                    <path d="M100,180 L100,50" stroke="#8a6e3a" stroke-width="4" />
+                    
+                    <!-- Wheat head -->
+                    <path d="M100,50 L120,30 M100,50 L80,30" stroke="#d4bd76" stroke-width="2" />
+                    <path d="M100,45 L125,25 M100,45 L75,25" stroke="#d4bd76" stroke-width="2" />
+                    <path d="M100,40 L130,20 M100,40 L70,20" stroke="#d4bd76" stroke-width="2" />
+                    <path d="M100,35 L135,15 M100,35 L65,15" stroke="#d4bd76" stroke-width="2" />
+                    <path d="M100,30 L140,10 M100,30 L60,10" stroke="#d4bd76" stroke-width="2" />
+                    
+                    <!-- Seeds -->
+                    <ellipse cx="120" cy="30" rx="4" ry="2" fill="#e8d28b" />
+                    <ellipse cx="80" cy="30" rx="4" ry="2" fill="#e8d28b" />
+                    <ellipse cx="125" cy="25" rx="4" ry="2" fill="#e8d28b" />
+                    <ellipse cx="75" cy="25" rx="4" ry="2" fill="#e8d28b" />
+                    <ellipse cx="130" cy="20" rx="4" ry="2" fill="#e8d28b" />
+                    <ellipse cx="70" cy="20" rx="4" ry="2" fill="#e8d28b" />
+                    <ellipse cx="135" cy="15" rx="4" ry="2" fill="#e8d28b" />
+                    <ellipse cx="65" cy="15" rx="4" ry="2" fill="#e8d28b" />
+                    <ellipse cx="140" cy="10" rx="4" ry="2" fill="#e8d28b" />
+                    <ellipse cx="60" cy="10" rx="4" ry="2" fill="#e8d28b" />
+                </svg>
+                `;
+                break;
+            case 'rice':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Rice plant -->
+                    <path d="M100,180 L100,60" stroke="#8a6e3a" stroke-width="3" />
+                    
+                    <!-- Rice leaves -->
+                    <path d="M100,140 C120,120 140,140 150,120" stroke="#4a8f29" stroke-width="2" fill="none" />
+                    <path d="M100,140 C80,120 60,140 50,120" stroke="#4a8f29" stroke-width="2" fill="none" />
+                    <path d="M100,120 C125,100 145,120 160,100" stroke="#4a8f29" stroke-width="2" fill="none" />
+                    <path d="M100,120 C75,100 55,120 40,100" stroke="#4a8f29" stroke-width="2" fill="none" />
+                    <path d="M100,100 C130,80 150,100 170,80" stroke="#4a8f29" stroke-width="2" fill="none" />
+                    <path d="M100,100 C70,80 50,100 30,80" stroke="#4a8f29" stroke-width="2" fill="none" />
+                    
+                    <!-- Rice grains -->
+                    <ellipse cx="95" cy="55" rx="3" ry="5" fill="#f0e6d2" />
+                    <ellipse cx="102" cy="50" rx="3" ry="5" fill="#f0e6d2" />
+                    <ellipse cx="98" cy="45" rx="3" ry="5" fill="#f0e6d2" />
+                    <ellipse cx="105" cy="42" rx="3" ry="5" fill="#f0e6d2" />
+                    <ellipse cx="95" cy="40" rx="3" ry="5" fill="#f0e6d2" />
+                    <ellipse cx="100" cy="35" rx="3" ry="5" fill="#f0e6d2" />
+                </svg>
+                `;
+                break;
+            case 'maize':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Corn stalk -->
+                    <path d="M100,180 L100,40" stroke="#4a8f29" stroke-width="4" />
+                    
+                    <!-- Corn leaves -->
+                    <path d="M100,150 C130,130 160,150 180,130" stroke="#4a8f29" stroke-width="3" fill="none" />
+                    <path d="M100,150 C70,130 40,150 20,130" stroke="#4a8f29" stroke-width="3" fill="none" />
+                    <path d="M100,120 C135,100 165,120 185,100" stroke="#4a8f29" stroke-width="3" fill="none" />
+                    <path d="M100,120 C65,100 35,120 15,100" stroke="#4a8f29" stroke-width="3" fill="none" />
+                    <path d="M100,90 C120,70 140,90 160,70" stroke="#4a8f29" stroke-width="3" fill="none" />
+                    <path d="M100,90 C80,70 60,90 40,70" stroke="#4a8f29" stroke-width="3" fill="none" />
+                    
+                    <!-- Corn cob -->
+                    <ellipse cx="100" cy="80" rx="15" ry="30" fill="#f5d76e" />
+                    <path d="M85,80 L115,80" stroke="#4a8f29" stroke-width="2" />
+                    <path d="M85,75 L115,75" stroke="#4a8f29" stroke-width="1" />
+                    <path d="M85,85 L115,85" stroke="#4a8f29" stroke-width="1" />
+                    <path d="M85,70 L115,70" stroke="#4a8f29" stroke-width="1" />
+                    <path d="M85,90 L115,90" stroke="#4a8f29" stroke-width="1" />
+                    <path d="M85,65 L115,65" stroke="#4a8f29" stroke-width="1" />
+                    <path d="M85,95 L115,95" stroke="#4a8f29" stroke-width="1" />
+                    <path d="M85,60 L115,60" stroke="#4a8f29" stroke-width="1" />
+                    <path d="M85,100 L115,100" stroke="#4a8f29" stroke-width="1" />
+                </svg>
+                `;
+                break;
+            default:
+                // Generic plant SVG
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Plant stem -->
+                    <path d="M100,180 L100,80" stroke="#4a8f29" stroke-width="3" />
+                    
+                    <!-- Leaves -->
+                    <path d="M100,140 C120,120 140,130 150,110" stroke="#4a8f29" stroke-width="2" fill="none" />
+                    <path d="M100,140 C80,120 60,130 50,110" stroke="#4a8f29" stroke-width="2" fill="none" />
+                    <path d="M100,120 C125,100 135,110 145,90" stroke="#4a8f29" stroke-width="2" fill="none" />
+                    <path d="M100,120 C75,100 65,110 55,90" stroke="#4a8f29" stroke-width="2" fill="none" />
+                    
+                    <!-- Plant head/flower -->
+                    <circle cx="100" cy="60" r="20" fill="#a1c349" />
+                    <circle cx="100" cy="60" r="15" fill="#b1d359" />
+                    <circle cx="100" cy="60" r="10" fill="#c1e369" />
+                </svg>
+                `;
+        }
+    }
+</script>
+{% endblock %}

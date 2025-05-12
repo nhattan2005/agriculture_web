@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+
+{% block title %}Crop Information{% endblock %}
+
+{% block page_title %}Crop Information Dashboard{% endblock %}
+
+{% block content %}
+<div class="crops-dashboard">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="card crop-list-card">
+                <div class="card-body">
+                    <h3 class="card-title">Available Crops</h3>
+                    <p>Select a crop to view detailed information.</p>
+                    
+                    <div class="crop-list">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="crop-item" data-crop="rice">
+                                    <div class="crop-icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <div class="crop-name">Rice</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="crop-item" data-crop="wheat">
+                                    <div class="crop-icon">
+                                        <i class="fas fa-wheat-awn"></i>
+                                    </div>
+                                    <div class="crop-name">Wheat</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="crop-item" data-crop="maize">
+                                    <div class="crop-icon">
+                                        <i class="fas fa-leaf"></i>
+                                    </div>
+                                    <div class="crop-name">Maize</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="crop-item" data-crop="chickpea">
+                                    <div class="crop-icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <div class="crop-name">Chickpea</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="crop-item" data-crop="kidneybeans">
+                                    <div class="crop-icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <div class="crop-name">Kidney Beans</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="crop-item" data-crop="pigeonpeas">
+                                    <div class="crop-icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <div class="crop-name">Pigeon Peas</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="crop-item" data-crop="mothbeans">
+                                    <div class="crop-icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <div class="crop-name">Moth Beans</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="crop-item" data-crop="mungbean">
+                                    <div class="crop-icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <div class="crop-name">Mung Bean</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="crop-item" data-crop="blackgram">
+                                    <div class="crop-icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <div class="crop-name">Black Gram</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="crop-item" data-crop="lentil">
+                                    <div class="crop-icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <div class="crop-name">Lentil</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="crop-item" data-crop="pomegranate">
+                                    <div class="crop-icon">
+                                        <i class="fas fa-apple-alt"></i>
+                                    </div>
+                                    <div class="crop-name">Pomegranate</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="crop-item" data-crop="banana">
+                                    <div class="crop-icon">
+                                        <i class="fas fa-apple-alt"></i>
+                                    </div>
+                                    <div class="crop-name">Banana</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-5">
+            <div class="card crop-detail-preview">
+                <div class="card-body">
+                    <h3 class="card-title">Wheat</h3>
+                    
+                    <div class="crop-image text-center mb-3">
+                        <svg viewBox="0 0 200 200" width="150" height="150">
+                            <!-- Wheat stalk SVG -->
+                            <path d="M100,180 L100,50" stroke="#8a6e3a" stroke-width="4" />
+                            
+                            <!-- Wheat head -->
+                            <path d="M100,50 L120,30 M100,50 L80,30" stroke="#d4bd76" stroke-width="2" />
+                            <path d="M100,45 L125,25 M100,45 L75,25" stroke="#d4bd76" stroke-width="2" />
+                            <path d="M100,40 L130,20 M100,40 L70,20" stroke="#d4bd76" stroke-width="2" />
+                            <path d="M100,35 L135,15 M100,35 L65,15" stroke="#d4bd76" stroke-width="2" />
+                            <path d="M100,30 L140,10 M100,30 L60,10" stroke="#d4bd76" stroke-width="2" />
+                            
+                            <!-- Seeds -->
+                            <ellipse cx="120" cy="30" rx="4" ry="2" fill="#e8d28b" />
+                            <ellipse cx="80" cy="30" rx="4" ry="2" fill="#e8d28b" />
+                            <ellipse cx="125" cy="25" rx="4" ry="2" fill="#e8d28b" />
+                            <ellipse cx="75" cy="25" rx="4" ry="2" fill="#e8d28b" />
+                            <ellipse cx="130" cy="20" rx="4" ry="2" fill="#e8d28b" />
+                            <ellipse cx="70" cy="20" rx="4" ry="2" fill="#e8d28b" />
+                            <ellipse cx="135" cy="15" rx="4" ry="2" fill="#e8d28b" />
+                            <ellipse cx="65" cy="15" rx="4" ry="2" fill="#e8d28b" />
+                            <ellipse cx="140" cy="10" rx="4" ry="2" fill="#e8d28b" />
+                            <ellipse cx="60" cy="10" rx="4" ry="2" fill="#e8d28b" />
+                        </svg>
+                    </div>
+                    
+                    <div class="crop-nutrients mb-4">
+                        <div class="row">
+                            <div class="col-4 text-center">
+                                <div class="nutrient-circle">
+                                    <span class="value">10</span>
+                                    <span class="unit">%</span>
+                                </div>
+                                <div class="nutrient-name">Fats</div>
+                            </div>
+                            
+                            <div class="col-4 text-center">
+                                <div class="nutrient-circle">
+                                    <span class="value">26</span>
+                                    <span class="unit">%</span>
+                                </div>
+                                <div class="nutrient-name">Proteins</div>
+                            </div>
+                            
+                            <div class="col-4 text-center">
+                                <div class="nutrient-circle">
+                                    <span class="value">34</span>
+                                    <span class="unit">%</span>
+                                </div>
+                                <div class="nutrient-name">Carbs</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="crop-description">
+                        <p>
+                            Raw wheat can be ground into flour or, using hard durum wheat only, can be 
+                            ground into semolina, germinated and dried creating malt, crushed and de-branned 
+                            into groats, or steamed, dried, crushed and de-branned into bulgur also 
+                            known as groats.
+                        </p>
+                    </div>
+                    
+                    <div class="actions text-center mt-3">
+                        <a href="{{ url_for('crop_detail', crop_name='wheat') }}" class="btn btn-outline-primary">
+                            <i class="fas fa-info-circle"></i> More Info
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set up click handlers for crop items
+        const cropItems = document.querySelectorAll('.crop-item');
+        
+        cropItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const cropName = this.dataset.crop;
+                window.location.href = `/crop/${cropName}`;
+            });
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block page_title %}Your Agricultural Assistant{% endblock %}
+
+{% block content %}
+<div class="welcome-section">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card welcome-card">
+                <div class="card-body">
+                    <h2 class="card-title">Welcome to your Agriculture Decision Support System</h2>
+                    <p class="card-text">
+                        Our system helps farmers make informed decisions about which crops to plant based on 
+                        soil conditions and environmental factors. Get personalized recommendations and learn 
+                        more about different crop types.
+                    </p>
+                    <div class="actions mt-4">
+                        <a href="{{ url_for('predict') }}" class="btn btn-success">
+                            <i class="fas fa-chart-line"></i> Get Crop Recommendations
+                        </a>
+                        <a href="{{ url_for('crops') }}" class="btn btn-outline-success ms-2">
+                            <i class="fas fa-seedling"></i> Explore Crops Information
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card info-card">
+                <div class="card-body">
+                    <h3 class="card-title">System Features</h3>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-microscope text-success"></i>
+                            <div>
+                                <h4>Soil Analysis</h4>
+                                <p>Enter your soil's NPK values and pH level to get accurate recommendations</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-cloud-sun-rain text-primary"></i>
+                            <div>
+                                <h4>Weather Conditions</h4>
+                                <p>Input temperature, humidity, and rainfall data for better predictions</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-brain text-warning"></i>
+                            <div>
+                                <h4>AI-Powered Recommendations</h4>
+                                <p>Our system uses machine learning to recommend the most suitable crops</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-book-open text-info"></i>
+                            <div>
+                                <h4>Crop Information</h4>
+                                <p>Access detailed information about various crops and their requirements</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card dashboard-preview">
+                <div class="card-body">
+                    <h3 class="card-title">Current Conditions Overview</h3>
+                    
+                    <div class="condition-cards">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mini-card">
+                                    <div class="mini-card-icon">
+                                        <i class="fas fa-thermometer-half"></i>
+                                    </div>
+                                    <div class="mini-card-content">
+                                        <h5>Temperature</h5>
+                                        <div class="value-indicator">
+                                            <span class="value">24°C</span>
+                                            <span class="status good">Good</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="mini-card">
+                                    <div class="mini-card-icon">
+                                        <i class="fas fa-tint"></i>
+                                    </div>
+                                    <div class="mini-card-content">
+                                        <h5>Soil Moisture</h5>
+                                        <div class="value-indicator">
+                                            <span class="value">72%</span>
+                                            <span class="status high">High</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="mini-card">
+                                    <div class="mini-card-icon">
+                                        <i class="fas fa-cloud-rain"></i>
+                                    </div>
+                                    <div class="mini-card-content">
+                                        <h5>Precipitation</h5>
+                                        <div class="value-indicator">
+                                            <span class="value">-2mm</span>
+                                            <span class="status low">Low</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 text-center">
+                        <a href="{{ url_for('predict') }}" class="btn btn-primary">
+                            Go to Analytics <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
