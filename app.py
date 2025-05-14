@@ -1,11 +1,9 @@
 import os
 import pickle
 import numpy as np
-import pandas as pd
 import logging
 from flask import Flask, render_template, request, jsonify, redirect, url_for, flash, session
-from crop_predictor import predict_crop
-from model import KNN, MultiClassLogisticRegression
+from models.crop_predictor import predict_crop
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -46,52 +44,17 @@ def predict():
                 'rainfall': rainfall
             }
             
-            # Make prediction using your ensemble
-            prediction_result = predict_crop(n, p, k, temperature, humidity, ph, rainfall)
+            # Make prediction using the enhanced ensemble prediction
+            # Now returns both prediction and model predictions
+            prediction_result, model_predictions = predict_crop(n, p, k, temperature, humidity, ph, rainfall)
             
-            # Get individual model predictions
-            model_dir = os.path.dirname(__file__)  # Use project root
-            model_predictions = {}
-            model_names = ['SVM Scratch', 'KNN Scratch', 'Decision Tree Scratch', 'Random Forest Scratch', 'Logistic Regression Scratch']
-            file_names = ['svm_scratch_model.pkl', 'knn_scratch_model.pkl', 'dt_scratch_model.pkl', 
-                          'rf_scratch_model.pkl', 'logistic_scratch_model.pkl']
-            
-            input_data = pd.DataFrame([[n, p, k, temperature, humidity, ph, rainfall]],
-                                     columns=['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall'])
-            
-            for idx, file_name in enumerate(file_names):
-                model_path = os.path.join(model_dir, file_name)
-                logging.debug(f"Checking model file: {model_path}")
-                if os.path.exists(model_path):
-                    try:
-                        with open(model_path, 'rb') as f:
-                            model_data = pickle.load(f)
-                            model_instance = model_data['model']
-                            scaler = model_data['scaler']
-                            label_encoder = model_data['label_encoder']
-                        
-                        # Scale input data
-                        input_scaled = scaler.transform(input_data)
-                        
-                        # Predict (handle different prediction methods)
-                        logging.debug(f"Attempting individual prediction with {model_names[idx]}")
-                        if isinstance(model_instance, KNN):
-                            pred = model_instance.predict(input_scaled[0])
-                        elif isinstance(model_instance, MultiClassLogisticRegression):
-                            pred = model_instance.predict_classes(input_scaled)[0]
-                        else:
-                            pred = model_instance.predict(input_scaled)[0]
-                            # Handle float64 predictions
-                            if isinstance(pred, float):
-                                pred = int(round(pred))
-                        
-                        # Decode prediction
-                        pred = label_encoder.inverse_transform([pred])[0]
-                        model_predictions[model_names[idx]] = pred
-                    except Exception as model_err:
-                        logging.error(f"Error with model {file_name}: {str(model_err)}")
+            # Calculate vote counts for visualization
+            vote_counts = {}
+            for model_name, prediction in model_predictions.items():
+                if prediction in vote_counts:
+                    vote_counts[prediction] += 1
                 else:
-                    logging.error(f"Model file not found: {model_path}")
+                    vote_counts[prediction] = 1
             
             flash(f'Recommended crop: {prediction_result}', 'success')
                 
@@ -99,8 +62,10 @@ def predict():
             logging.error(f"Prediction error: {str(e)}")
             flash(f'Error making prediction: {str(e)}', 'danger')
     
-    return render_template('predict.html', prediction=prediction_result, 
+    return render_template('predict.html', 
+                          prediction=prediction_result, 
                           model_predictions=model_predictions,
+                          vote_counts=vote_counts if 'vote_counts' in locals() else None,
                           input_data=session.get('input_data', None))
 
 @app.route('/crops')

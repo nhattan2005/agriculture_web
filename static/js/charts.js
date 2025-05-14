@@ -237,27 +237,11 @@ function createModelComparisonChart(canvasId, modelPredictions, finalPrediction)
         return;
     }
     
-    // Handle empty or invalid modelPredictions
-    if (!modelPredictions || Object.keys(modelPredictions).length === 0) {
-        console.warn(`No model predictions provided for chart "${canvasId}".`);
-        const ctx = canvas.getContext('2d');
-        ctx.font = '14px Arial';
-        ctx.fillStyle = '#777';
-        ctx.textAlign = 'center';
-        ctx.fillText('No model predictions available', canvas.width / 2, canvas.height / 2);
-        return;
-    }
-    
     // Transform predictions into a format for visualization
     // Count occurrences of each prediction
     const predictionCounts = {};
-    const modelAssignments = {}; // Track which models predict each crop
-    Object.entries(modelPredictions).forEach(([model, prediction]) => {
+    Object.values(modelPredictions).forEach(prediction => {
         predictionCounts[prediction] = (predictionCounts[prediction] || 0) + 1;
-        if (!modelAssignments[prediction]) {
-            modelAssignments[prediction] = [];
-        }
-        modelAssignments[prediction].push(model);
     });
     
     const uniquePredictions = Object.keys(predictionCounts);
@@ -293,12 +277,8 @@ function createModelComparisonChart(canvasId, modelPredictions, finalPrediction)
                 tooltip: {
                     callbacks: {
                         label: function(context) {
-                            const prediction = context.label;
                             const count = context.raw;
-                            const models = modelAssignments[prediction] || [];
-                            const modelList = models.join(', ');
-                            const countText = count === 1 ? `${count} model` : `${count} models`;
-                            return `${countText}: ${modelList}`;
+                            return count === 1 ? `${count} model` : `${count} models`;
                         }
                     }
                 }
@@ -315,6 +295,110 @@ function createModelComparisonChart(canvasId, modelPredictions, finalPrediction)
                         stepSize: 1
                     }
                 }
+            }
+        }
+    });
+    
+    return chart;
+}
+
+/**
+ * Creates a detailed visualization for model predictions comparison
+ * @param {string} canvasId - The ID of the canvas element
+ * @param {object} modelPredictions - Object with model names and predictions
+ * @param {object} voteCounts - Object with vote counts for each prediction
+ * @param {string} finalPrediction - The final prediction based on majority voting
+ */
+function createDetailedModelComparisonChart(canvasId, modelPredictions, voteCounts, finalPrediction) {
+    const canvas = document.getElementById(canvasId);
+    
+    if (!canvas) {
+        console.error(`Canvas element with ID "${canvasId}" not found.`);
+        return;
+    }
+    
+    // Create two sections: one for model-by-model breakdown, one for vote counts
+    
+    // First, prepare model data (model-specific)
+    const modelNames = Object.keys(modelPredictions);
+    const modelData = modelNames.map(name => ({
+        name: name,
+        prediction: modelPredictions[name],
+        isWinner: modelPredictions[name] === finalPrediction
+    }));
+    
+    // Then, prepare vote data (crop-specific)
+    const cropNames = Object.keys(voteCounts);
+    const voteData = cropNames.map(name => ({
+        name: name,
+        count: voteCounts[name],
+        isWinner: name === finalPrediction
+    })).sort((a, b) => b.count - a.count); // Sort by vote count
+    
+    // Color scheme
+    const winnerColor = 'rgba(76, 175, 80, 0.8)';
+    const winnerBorderColor = 'rgba(76, 175, 80, 1)';
+    const otherColors = [
+        'rgba(33, 150, 243, 0.6)', // Blue
+        'rgba(255, 152, 0, 0.6)',  // Orange
+        'rgba(156, 39, 176, 0.6)',  // Purple
+        'rgba(233, 30, 99, 0.6)',   // Pink
+    ];
+    const otherBorderColors = otherColors.map(color => color.replace('0.6', '1'));
+    
+    // Create a more detailed doughnut chart with model breakdown
+    const ctx = canvas.getContext('2d');
+    
+    // Create a PolarArea chart for vote distribution
+    const chart = new Chart(ctx, {
+        type: 'polarArea',
+        data: {
+            labels: voteData.map(item => item.name),
+            datasets: [{
+                data: voteData.map(item => item.count),
+                backgroundColor: voteData.map((item, index) => 
+                    item.isWinner ? winnerColor : otherColors[index % otherColors.length]),
+                borderColor: voteData.map((item, index) => 
+                    item.isWinner ? winnerBorderColor : otherBorderColors[index % otherBorderColors.length]),
+                borderWidth: 1
+            }]
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Voting Distribution',
+                    font: {
+                        size: 16
+                    }
+                },
+                subtitle: {
+                    display: true,
+                    text: 'The largest segment represents the final prediction',
+                    font: {
+                        size: 12,
+                        style: 'italic'
+                    },
+                    padding: {
+                        bottom: 10
+                    }
+                },
+                legend: {
+                    position: 'bottom'
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const value = context.raw;
+                            const percentage = Math.round((value / Object.values(voteCounts).reduce((a, b) => a + b, 0)) * 100);
+                            return `${context.label}: ${value} votes (${percentage}%)`;
+                        }
+                    }
+                }
+            },
+            animation: {
+                animateRotate: true,
+                animateScale: true
             }
         }
     });

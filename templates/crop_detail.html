@@ -336,23 +336,730 @@
                 </svg>
                 `;
                 break;
+                case 'chickpea':
+                    svgContainer.innerHTML = `
+                    <svg viewBox="0 0 200 200" width="150" height="150">
+                        <!-- Thân cây -->
+                        <path d="M100,180 C90,140 90,100 100,70 C110,100 110,140 100,180" stroke="#6b8e23" stroke-width="6" fill="none" />
+                        
+                        <!-- Chi tiết vỏ thân cây (dây leo và kết cấu vỏ cây) -->
+                        <path d="M100,80 Q95,85 100,90 Q105,95 100,100 Q95,95 100,110 Q105,115 100,120" stroke="#4e9f3d" stroke-width="2" fill="none" />
+                        <path d="M100,120 Q90,130 100,140 Q110,150 100,160" stroke="#4e9f3d" stroke-width="2" fill="none" />
+                        
+                        <!-- Cành cây -->
+                        <path d="M100,110 C90,100 80,90 75,85" stroke="#6b8e23" stroke-width="4" fill="none" />
+                        <path d="M100,110 C110,100 120,90 125,85" stroke="#6b8e23" stroke-width="4" fill="none" />
+                        
+                        <!-- Lá -->
+                        <ellipse cx="85" cy="100" rx="9" ry="7" fill="#7cb342" />
+                        <ellipse cx="115" cy="100" rx="9" ry="7" fill="#7cb342" />
+                        <ellipse cx="75" cy="120" rx="9" ry="7" fill="#7cb342" />
+                        <ellipse cx="125" cy="120" rx="9" ry="7" fill="#7cb342" />
+                        <ellipse cx="90" cy="140" rx="9" ry="7" fill="#7cb342" />
+                        <ellipse cx="110" cy="140" rx="9" ry="7" fill="#7cb342" />
+                        <ellipse cx="70" cy="80" rx="9" ry="7" fill="#7cb342" />
+                        <ellipse cx="130" cy="80" rx="9" ry="7" fill="#7cb342" />
+
+                        <!-- Hoa -->
+                        <circle cx="95" cy="50" r="5" fill="#ffb6c1" />
+                        <circle cx="105" cy="50" r="5" fill="#ffb6c1" />
+                        <circle cx="100" cy="55" r="5" fill="#ffb6c1" />
+                        
+                        <!-- Quả đậu chickpea (chi tiết hơn, không có bóng) -->
+                        <g>
+                            <!-- Quả 1 -->
+                            <path d="M95,60 Q90,55 85,60 Q90,65 95,60" fill="#d4a373" stroke="#9e7c53" stroke-width="1"/>
+                            <!-- Quả 2 -->
+                            <path d="M105,55 Q100,50 95,55 Q100,60 105,55" fill="#d4a373" stroke="#9e7c53" stroke-width="1"/>
+                            <!-- Quả 3 -->
+                            <path d="M100,65 Q95,60 90,65 Q95,70 100,65" fill="#d4a373" stroke="#9e7c53" stroke-width="1"/>
+                            <!-- Quả 4 -->
+                            <path d="M85,70 Q80,65 75,70 Q80,75 85,70" fill="#d4a373" stroke="#9e7c53" stroke-width="1"/>
+                            <!-- Quả 5 -->
+                            <path d="M115,70 Q110,65 105,70 Q110,75 115,70" fill="#d4a373" stroke="#9e7c53" stroke-width="1"/>
+                        </g>
+
+                        <!-- Chi tiết cỏ và nền -->
+                        <path d="M80,180 Q90,170 100,180" stroke="#3e8e41" stroke-width="2" fill="none" />
+                        <path d="M120,180 Q110,170 100,180" stroke="#3e8e41" stroke-width="2" fill="none" />
+                        <path d="M60,175 Q70,165 80,175" stroke="#3e8e41" stroke-width="2" fill="none" />
+                        <path d="M140,175 Q130,165 120,175" stroke="#3e8e41" stroke-width="2" fill="none" />
+                    </svg>
+                    `;
+                    break;
+            case 'pigeonpeas':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Thân cây -->
+                    <path d="M100,180 C95,140 90,100 100,70 C110,100 105,140 100,180" stroke="#6b8e23" stroke-width="4" fill="none" />
+
+                    <!-- Cành -->
+                    <path d="M100,120 C90,110 80,100 75,90" stroke="#6b8e23" stroke-width="3" fill="none" />
+                    <path d="M100,120 C110,110 120,100 125,90" stroke="#6b8e23" stroke-width="3" fill="none" />
+
+                    <!-- Lá -->
+                    <ellipse cx="85" cy="100" rx="8" ry="6" fill="#4caf50" />
+                    <ellipse cx="115" cy="100" rx="8" ry="6" fill="#4caf50" />
+                    <ellipse cx="75" cy="120" rx="8" ry="6" fill="#4caf50" />
+                    <ellipse cx="125" cy="120" rx="8" ry="6" fill="#4caf50" />
+                    <ellipse cx="90" cy="140" rx="8" ry="6" fill="#4caf50" />
+                    <ellipse cx="110" cy="140" rx="8" ry="6" fill="#4caf50" />
+                    <ellipse cx="70" cy="80" rx="8" ry="6" fill="#4caf50" />
+                    <ellipse cx="130" cy="80" rx="8" ry="6" fill="#4caf50" />
+
+                    <!-- Hoa -->
+                    <circle cx="95" cy="50" r="5" fill="#ffcc00" />
+                    <circle cx="105" cy="50" r="5" fill="#ffcc00" />
+                    <circle cx="100" cy="55" r="5" fill="#ffcc00" />
+
+                    <!-- Quả đậu đầu chim -->
+                    <ellipse cx="95" cy="60" rx="10" ry="8" fill="#8b4513" />
+                    <ellipse cx="105" cy="55" rx="10" ry="8" fill="#8b4513" />
+                    <ellipse cx="100" cy="65" rx="10" ry="8" fill="#8b4513" />
+                    <ellipse cx="85" cy="70" rx="10" ry="8" fill="#8b4513" />
+                    <ellipse cx="115" cy="70" rx="10" ry="8" fill="#8b4513" />
+
+                    <!-- Cỏ và chi tiết nền -->
+                    <path d="M80,180 Q90,170 100,180" stroke="#3e8e41" stroke-width="2" fill="none" />
+                    <path d="M120,180 Q110,170 100,180" stroke="#3e8e41" stroke-width="2" fill="none" />
+                    <path d="M60,175 Q70,165 80,175" stroke="#3e8e41" stroke-width="2" fill="none" />
+                    <path d="M140,175 Q130,165 120,175" stroke="#3e8e41" stroke-width="2" fill="none" />
+                </svg>
+                `;
+                break;
+            case 'mothbeans':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Thân cây chính -->
+                    <path d="M100,180 C92,140 88,100 100,70 C112,100 108,140 100,180" stroke="#6b8e23" stroke-width="6" fill="none" />
+
+                    <!-- Vân và chi tiết thân cây -->
+                    <path d="M100,85 Q95,90 100,95 Q105,100 100,105 Q95,110 100,115 Q105,120 100,125" stroke="#4e9f3d" stroke-width="2" fill="none" />
+
+                    <!-- Cành phụ -->
+                    <path d="M100,115 C90,105 80,95 75,85" stroke="#6b8e23" stroke-width="4" fill="none" />
+                    <path d="M100,115 C110,105 120,95 125,85" stroke="#6b8e23" stroke-width="4" fill="none" />
+
+                    <!-- Lá -->
+                    <ellipse cx="85" cy="100" rx="9" ry="7" fill="#689f38" />
+                    <ellipse cx="115" cy="100" rx="9" ry="7" fill="#689f38" />
+                    <ellipse cx="75" cy="120" rx="9" ry="7" fill="#689f38" />
+                    <ellipse cx="125" cy="120" rx="9" ry="7" fill="#689f38" />
+                    <ellipse cx="90" cy="140" rx="9" ry="7" fill="#689f38" />
+                    <ellipse cx="110" cy="140" rx="9" ry="7" fill="#689f38" />
+
+                    <!-- Hoa -->
+                    <circle cx="95" cy="50" r="5" fill="#fbc02d" />
+                    <circle cx="105" cy="50" r="5" fill="#fbc02d" />
+                    <circle cx="100" cy="55" r="5" fill="#fbc02d" />
+
+                    <!-- Cỏ nền -->
+                    <path d="M80,180 Q90,170 100,180" stroke="#3e8e41" stroke-width="2" fill="none" />
+                    <path d="M120,180 Q110,170 100,180" stroke="#3e8e41" stroke-width="2" fill="none" />
+                </svg>
+                `;
+                break;
+            case 'mungbean':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Thân cây chính -->
+                    <path d="M100,180 C92,140 90,100 100,70 C110,100 108,140 100,180" stroke="#558b2f" stroke-width="6" fill="none" />
+
+                    <!-- Chi tiết thân (vân nổi) -->
+                    <path d="M100,90 Q95,95 100,100 Q105,105 100,110 Q95,115 100,120" stroke="#33691e" stroke-width="2" fill="none" />
+
+                    <!-- Cành -->
+                    <path d="M100,115 C90,105 80,95 75,85" stroke="#558b2f" stroke-width="4" fill="none" />
+                    <path d="M100,115 C110,105 120,95 125,85" stroke="#558b2f" stroke-width="4" fill="none" />
+
+                    <!-- Lá (màu xanh tươi hơn) -->
+                    <ellipse cx="85" cy="100" rx="9" ry="7" fill="#8bc34a" />
+                    <ellipse cx="115" cy="100" rx="9" ry="7" fill="#8bc34a" />
+                    <ellipse cx="75" cy="120" rx="9" ry="7" fill="#8bc34a" />
+                    <ellipse cx="125" cy="120" rx="9" ry="7" fill="#8bc34a" />
+                    <ellipse cx="90" cy="140" rx="9" ry="7" fill="#8bc34a" />
+                    <ellipse cx="110" cy="140" rx="9" ry="7" fill="#8bc34a" />
+
+                    <!-- Hoa -->
+                    <circle cx="95" cy="50" r="5" fill="#ffeb3b" />
+                    <circle cx="105" cy="50" r="5" fill="#ffeb3b" />
+                    <circle cx="100" cy="55" r="5" fill="#ffeb3b" />
+
+                    <!-- Quả đậu xanh (mỏng, dài) -->
+                                <g transform="translate(50,20) scale(2)">
+                                <!-- Vỏ quả dài và mảnh, hơi cong -->
+                                <path d="M25,60 Q20,50 25,40 Q30,50 25,60 Z" fill="#9e9d24" stroke="#6d4c41" stroke-width="0.5" />
+                                <!-- Các đường chỉ hạt -->
+                                <line x1="24" y1="58" x2="26" y2="58" stroke="#827717" stroke-width="0.3"/>
+                                <line x1="23" y1="54" x2="27" y2="54" stroke="#827717" stroke-width="0.3"/>
+                                <line x1="24" y1="50" x2="26" y2="50" stroke="#827717" stroke-width="0.3"/>
+                                <line x1="23" y1="46" x2="27" y2="46" stroke="#827717" stroke-width="0.3"/>
+                            </g>
+
+                    <!-- Đất / cỏ -->
+                    <path d="M80,180 Q90,170 100,180" stroke="#4caf50" stroke-width="2" fill="none" />
+                    <path d="M120,180 Q110,170 100,180" stroke="#4caf50" stroke-width="2" fill="none" />
+                </svg>
+                `;
+                break;
+                case 'kidneybeans':
+                    svgContainer.innerHTML = `
+                    <svg viewBox="0 0 200 200" width="150" height="150">
+                        <!-- Thân cây -->
+                        <path d="M100,180 C90,140 80,100 100,70 C120,100 110,140 100,180" stroke="#6b8e23" stroke-width="4" fill="none" />
+
+                        <!-- Cành -->
+                        <path d="M100,120 C90,110 80,100 75,90" stroke="#6b8e23" stroke-width="3" fill="none" />
+                        <path d="M100,120 C110,110 120,100 125,90" stroke="#6b8e23" stroke-width="3" fill="none" />
+
+                        <!-- Lá -->
+                        <ellipse cx="85" cy="100" rx="8" ry="6" fill="#4caf50" />
+                        <ellipse cx="115" cy="100" rx="8" ry="6" fill="#4caf50" />
+                        <ellipse cx="75" cy="120" rx="8" ry="6" fill="#4caf50" />
+                        <ellipse cx="125" cy="120" rx="8" ry="6" fill="#4caf50" />
+                        <ellipse cx="90" cy="140" rx="8" ry="6" fill="#4caf50" />
+                        <ellipse cx="110" cy="140" rx="8" ry="6" fill="#4caf50" />
+                        <ellipse cx="70" cy="80" rx="8" ry="6" fill="#4caf50" />
+                        <ellipse cx="130" cy="80" rx="8" ry="6" fill="#4caf50" />
+
+                        <!-- Hoa -->
+                        <circle cx="95" cy="50" r="5" fill="#ffcccb" />
+                        <circle cx="105" cy="50" r="5" fill="#ffcccb" />
+                        <circle cx="100" cy="55" r="5" fill="#ffcccb" />
+
+                        <!-- Quả đậu thận -->
+                        <ellipse cx="95" cy="60" rx="10" ry="8" fill="#8b0000" />
+                        <ellipse cx="105" cy="55" rx="10" ry="8" fill="#8b0000" />
+                        <ellipse cx="100" cy="65" rx="10" ry="8" fill="#8b0000" />
+                        <ellipse cx="85" cy="70" rx="10" ry="8" fill="#8b0000" />
+                        <ellipse cx="115" cy="70" rx="10" ry="8" fill="#8b0000" />
+
+                        <!-- Cỏ và chi tiết nền -->
+                        <path d="M80,180 Q90,170 100,180" stroke="#3e8e41" stroke-width="2" fill="none" />
+                        <path d="M120,180 Q110,170 100,180" stroke="#3e8e41" stroke-width="2" fill="none" />
+                        <path d="M60,175 Q70,165 80,175" stroke="#3e8e41" stroke-width="2" fill="none" />
+                        <path d="M140,175 Q130,165 120,175" stroke="#3e8e41" stroke-width="2" fill="none" />
+                    </svg>
+                    `;
+                    break;
+            case 'blackgram':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Thân chính -->
+                    <path d="M100,180 C95,140 90,100 100,70 C110,100 105,140 100,180" stroke="#4e772d" stroke-width="5" fill="none" />
+
+                    <!-- Cành bên trái -->
+                    <path d="M100,115 C90,105 80,95 70,85" stroke="#4e772d" stroke-width="3" fill="none" />
+                    <!-- Cành bên phải -->
+                    <path d="M100,115 C110,105 120,95 130,85" stroke="#4e772d" stroke-width="3" fill="none" />
+
+                    <!-- Lá -->
+                    <ellipse cx="85" cy="105" rx="8" ry="6" fill="#689f38" />
+                    <ellipse cx="115" cy="105" rx="8" ry="6" fill="#689f38" />
+                    <ellipse cx="75" cy="120" rx="8" ry="6" fill="#689f38" />
+                    <ellipse cx="125" cy="120" rx="8" ry="6" fill="#689f38" />
+
+                    <!-- Hoa -->
+                    <circle cx="98" cy="65" r="4" fill="#fffde7" stroke="#fbc02d" stroke-width="1"/>
+
+                    <!-- Quả đậu bên trái - gắn với cành -->
+                    <path d="M70,85 Q65,100 70,115 Q75,100 70,85 Z" fill="#3e2723" stroke="#1b1b1b" stroke-width="1"/>
+                    <circle cx="70" cy="88" r="1.5" fill="#212121"/>
+                    <circle cx="70" cy="95" r="1.5" fill="#212121"/>
+                    <circle cx="70" cy="102" r="1.5" fill="#212121"/>
+                    <circle cx="70" cy="109" r="1.5" fill="#212121"/>
+
+                    <!-- Quả đậu bên phải - gắn với cành -->
+                    <path d="M130,85 Q135,100 130,115 Q125,100 130,85 Z" fill="#3e2723" stroke="#1b1b1b" stroke-width="1"/>
+                    <circle cx="130" cy="88" r="1.5" fill="#212121"/>
+                    <circle cx="130" cy="95" r="1.5" fill="#212121"/>
+                    <circle cx="130" cy="102" r="1.5" fill="#212121"/>
+                    <circle cx="130" cy="109" r="1.5" fill="#212121"/>
+
+                    <!-- Cỏ nền -->
+                    <path d="M80,180 Q90,170 100,180" stroke="#388e3c" stroke-width="2" fill="none" />
+                    <path d="M120,180 Q110,170 100,180" stroke="#388e3c" stroke-width="2" fill="none" />
+                </svg>
+                `;
+                break;
+            case 'lentil':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Thân chính -->
+                    <path d="M100,180 C95,140 90,100 100,70 C110,100 105,140 100,180" stroke="#5d8233" stroke-width="5" fill="none" />
+
+                    <!-- Cành trái -->
+                    <path d="M100,110 C90,100 80,90 70,85" stroke="#5d8233" stroke-width="3" fill="none" />
+                    <!-- Cành phải -->
+                    <path d="M100,110 C110,100 120,90 130,85" stroke="#5d8233" stroke-width="3" fill="none" />
+
+                    <!-- Lá nhỏ - lentil có lá chét nhỏ và nhiều -->
+                    <ellipse cx="85" cy="100" rx="5" ry="3" fill="#76b947" />
+                    <ellipse cx="115" cy="100" rx="5" ry="3" fill="#76b947" />
+                    <ellipse cx="75" cy="110" rx="5" ry="3" fill="#76b947" />
+                    <ellipse cx="125" cy="110" rx="5" ry="3" fill="#76b947" />
+                    <ellipse cx="70" cy="90" rx="5" ry="3" fill="#76b947" />
+                    <ellipse cx="130" cy="90" rx="5" ry="3" fill="#76b947" />
+                    <ellipse cx="90" cy="120" rx="5" ry="3" fill="#76b947" />
+                    <ellipse cx="110" cy="120" rx="5" ry="3" fill="#76b947" />
+
+                    <!-- Hoa màu nhạt -->
+                    <circle cx="98" cy="65" r="4" fill="#f8bbd0" stroke="#ec407a" stroke-width="0.8" />
+                    <circle cx="92" cy="75" r="4" fill="#f48fb1" stroke="#d81b60" stroke-width="0.8" />
+                    <circle cx="105" cy="75" r="4" fill="#f48fb1" stroke="#d81b60" stroke-width="0.8" />
+                    <circle cx="95" cy="85" r="3.5" fill="#f06292" stroke="#ad1457" stroke-width="0.7" />
+                    <circle cx="105" cy="90" r="3.5" fill="#f06292" stroke="#ad1457" stroke-width="0.7" />
+                    <circle cx="100" cy="95" r="4" fill="#ec407a" stroke="#880e4f" stroke-width="0.8" />
+
+                    <!-- Quả lentil bên trái -->
+                    <path d="M70,85 Q65,95 70,105 Q75,95 70,85 Z" fill="#b49f78" stroke="#8a7b5c" stroke-width="1"/>
+                    <ellipse cx="70" cy="95" rx="3" ry="2" fill="#6d4c41" />
+                    <ellipse cx="70" cy="100" rx="3" ry="2" fill="#6d4c41" />
+
+                    <!-- Quả lentil bên phải -->
+                    <path d="M130,85 Q135,95 130,105 Q125,95 130,85 Z" fill="#b49f78" stroke="#8a7b5c" stroke-width="1"/>
+                    <ellipse cx="130" cy="95" rx="3" ry="2" fill="#6d4c41" />
+                    <ellipse cx="130" cy="100" rx="3" ry="2" fill="#6d4c41" />
+
+                    <!-- Nền cỏ -->
+                    <path d="M80,180 Q90,170 100,180" stroke="#388e3c" stroke-width="2" fill="none" />
+                    <path d="M120,180 Q110,170 100,180" stroke="#388e3c" stroke-width="2" fill="none" />
+                </svg>
+                `;
+                break;
+            case 'pomegranate':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Thân cây -->
+                    <path d="M100,180 C95,140 90,100 100,70 C110,100 105,140 100,180" stroke="#6b8e23" stroke-width="4" />
+
+                    <!-- Cành -->
+                    <path d="M100,120 C90,110 80,100 75,90" stroke="#6b8e23" stroke-width="3" fill="none" />
+                    <path d="M100,120 C110,110 120,100 125,90" stroke="#6b8e23" stroke-width="3" fill="none" />
+                    <path d="M100,110 C85,100 80,90 85,80" stroke="#6b8e23" stroke-width="3" fill="none" />
+                    <path d="M100,110 C115,100 120,90 115,80" stroke="#6b8e23" stroke-width="3" fill="none" />
+
+                    <!-- Lá -->
+                    <ellipse cx="85" cy="100" rx="9" ry="7" fill="#7cb342" />
+                    <ellipse cx="115" cy="100" rx="9" ry="7" fill="#7cb342" />
+                    <ellipse cx="75" cy="120" rx="9" ry="7" fill="#7cb342" />
+                    <ellipse cx="125" cy="120" rx="9" ry="7" fill="#7cb342" />
+                    <ellipse cx="90" cy="140" rx="9" ry="7" fill="#7cb342" />
+                    <ellipse cx="110" cy="140" rx="9" ry="7" fill="#7cb342" />
+                    <ellipse cx="70" cy="80" rx="9" ry="7" fill="#7cb342" />
+                    <ellipse cx="130" cy="80" rx="9" ry="7" fill="#7cb342" />
+
+                    <!-- Hoa -->
+                    <circle cx="95" cy="50" r="5" fill="#ffb6c1" />
+                    <circle cx="105" cy="50" r="5" fill="#ffb6c1" />
+                    <circle cx="100" cy="55" r="5" fill="#ffb6c1" />
+
+                    <!-- Quả lựu -->
+                    <ellipse cx="95" cy="60" rx="12" ry="10" fill="#d94c4c" />
+                    <ellipse cx="105" cy="55" rx="12" ry="10" fill="#d94c4c" />
+                    <ellipse cx="100" cy="65" rx="12" ry="10" fill="#d94c4c" />
+                    <ellipse cx="85" cy="70" rx="12" ry="10" fill="#d94c4c" />
+                    <ellipse cx="115" cy="70" rx="12" ry="10" fill="#d94c4c" />
+
+                    <!-- Chi tiết cỏ và nền -->
+                    <path d="M80,180 Q90,170 100,180" stroke="#3e8e41" stroke-width="2" fill="none" />
+                    <path d="M120,180 Q110,170 100,180" stroke="#3e8e41" stroke-width="2" fill="none" />
+                    <path d="M60,175 Q70,165 80,175" stroke="#3e8e41" stroke-width="2" fill="none" />
+                    <path d="M140,175 Q130,165 120,175" stroke="#3e8e41" stroke-width="2" fill="none" />
+                </svg>
+                `;
+                break;
+            case 'banana':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Thân cây chuối -->
+                    <path d="M100,180 L100,50" stroke="#8B4513" stroke-width="6" fill="none" />
+
+                    <!-- Lá chuối -->
+                    <path d="M100,120 C130,100 160,120 180,100" stroke="#228B22" stroke-width="4" fill="none" />
+                    <path d="M100,120 C70,100 40,120 20,100" stroke="#228B22" stroke-width="4" fill="none" />
+                    <path d="M100,90 C130,70 160,90 180,70" stroke="#228B22" stroke-width="4" fill="none" />
+                    <path d="M100,90 C70,70 40,90 20,70" stroke="#228B22" stroke-width="4" fill="none" />
+
+                    <!-- Chùm chuối -->
+                    <ellipse cx="100" cy="75" rx="30" ry="15" fill="#FFEB3B" />
+                    <ellipse cx="90" cy="70" rx="30" ry="15" fill="#FFEB3B" />
+                    <ellipse cx="110" cy="70" rx="30" ry="15" fill="#FFEB3B" />
+                    <ellipse cx="95" cy="65" rx="30" ry="15" fill="#FFEB3B" />
+                    <ellipse cx="105" cy="65" rx="30" ry="15" fill="#FFEB3B" />
+
+                    <!-- Chi tiết quả chuối -->
+                    <path d="M85,75 Q100,65 115,75" stroke="#FBC02D" stroke-width="2" fill="none" />
+                    <path d="M85,70 Q100,60 115,70" stroke="#FBC02D" stroke-width="2" fill="none" />
+                    <path d="M90,60 Q100,50 110,60" stroke="#FBC02D" stroke-width="2" fill="none" />
+                    <path d="M95,55 Q100,45 105,55" stroke="#FBC02D" stroke-width="2" fill="none" />
+                </svg>
+                `;
+                
+                break;
+            case 'mango':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Thân cây xoài -->
+                    <path d="M100,180 L100,60" stroke="#8B4513" stroke-width="6" fill="none" />
+
+                    <!-- Cành xoài -->
+                    <path d="M100,120 C80,110 60,100 55,90" stroke="#8B4513" stroke-width="4" fill="none" />
+                    <path d="M100,120 C120,110 140,100 145,90" stroke="#8B4513" stroke-width="4" fill="none" />
+
+                    <!-- Lá xoài -->
+                    <path d="M55,90 C40,80 30,60 50,50" stroke="#388E3C" stroke-width="4" fill="none" />
+                    <path d="M145,90 C160,80 170,60 150,50" stroke="#388E3C" stroke-width="4" fill="none" />
+                    <path d="M100,80 C80,60 60,70 50,60" stroke="#388E3C" stroke-width="4" fill="none" />
+                    <path d="M100,80 C120,60 140,70 150,60" stroke="#388E3C" stroke-width="4" fill="none" />
+
+                    <!-- Quả xoài -->
+                    <ellipse cx="100" cy="50" rx="20" ry="30" fill="#FFEB3B" stroke="#F57F17" stroke-width="2" />
+
+                    <!-- Chi tiết quả xoài -->
+                    <path d="M100,50 Q90,45 95,35 Q105,30 110,40 Q105,45 100,50" fill="#FFEB3B" stroke="#F57F17" stroke-width="2"/>
+                </svg>
+                `;
+                break;
+            case 'grapes':
+            svgContainer.innerHTML = `
+            <svg viewBox="0 0 200 200" width="150" height="150">
+                <!-- Thân cây nho -->
+                <path d="M100,180 L100,60" stroke="#8B4513" stroke-width="6" fill="none" />
+                
+                <!-- Cành nho -->
+                <path d="M100,120 C85,110 70,95 70,85" stroke="#8B4513" stroke-width="4" fill="none" />
+                <path d="M100,120 C115,110 130,95 130,85" stroke="#8B4513" stroke-width="4" fill="none" />
+                
+                <!-- Lá nho -->
+                <path d="M70,85 C55,75 40,60 50,50" stroke="#388E3C" stroke-width="4" fill="none" />
+                <path d="M130,85 C145,75 160,60 150,50" stroke="#388E3C" stroke-width="4" fill="none" />
+                
+                <!-- Chùm nho bên trái -->
+                <circle cx="90" cy="80" r="6" fill="#673AB7" />
+                <circle cx="95" cy="75" r="6" fill="#673AB7" />
+                <circle cx="85" cy="75" r="6" fill="#673AB7" />
+                <circle cx="100" cy="70" r="6" fill="#673AB7" />
+                <circle cx="90" cy="65" r="6" fill="#673AB7" />
+                <circle cx="95" cy="60" r="6" fill="#673AB7" />
+                <circle cx="85" cy="60" r="6" fill="#673AB7" />
+                <circle cx="100" cy="55" r="6" fill="#673AB7" />
+                <circle cx="95" cy="50" r="6" fill="#673AB7" />
+                
+                <!-- Chùm nho bên phải -->
+                <circle cx="110" cy="80" r="6" fill="#673AB7" />
+                <circle cx="115" cy="75" r="6" fill="#673AB7" />
+                <circle cx="105" cy="75" r="6" fill="#673AB7" />
+                <circle cx="120" cy="70" r="6" fill="#673AB7" />
+                <circle cx="110" cy="65" r="6" fill="#673AB7" />
+                <circle cx="115" cy="60" r="6" fill="#673AB7" />
+                <circle cx="105" cy="60" r="6" fill="#673AB7" />
+                <circle cx="120" cy="55" r="6" fill="#673AB7" />
+                <circle cx="115" cy="50" r="6" fill="#673AB7" />
+                
+                <!-- Cành của chùm nho -->
+                <path d="M95,80 Q100,85 105,90" stroke="#8B4513" stroke-width="2" fill="none" />
+                <path d="M105,80 Q110,85 115,90" stroke="#8B4513" stroke-width="2" fill="none" />
+            </svg>
+            `;
+                break;
+            case 'watermelon':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Vỏ dưa hấu -->
+                    <ellipse cx="100" cy="100" rx="80" ry="60" fill="#4CAF50" stroke="#388E3C" stroke-width="5" />
+
+                    <!-- Các vệt vỏ dưa hấu -->
+                    <path d="M100,40 Q85,70 100,100 Q115,70 100,40" fill="none" stroke="#388E3C" stroke-width="4" />
+                    <path d="M100,40 Q110,60 100,100 Q90,60 100,40" fill="none" stroke="#388E3C" stroke-width="4" />
+                    <path d="M100,160 Q85,130 100,100 Q115,130 100,160" fill="none" stroke="#388E3C" stroke-width="4" />
+                    <path d="M100,160 Q110,140 100,100 Q90,140 100,160" fill="none" stroke="#388E3C" stroke-width="4" />
+                    
+                    <!-- Phần ruột dưa hấu -->
+                    <ellipse cx="100" cy="100" rx="70" ry="50" fill="#F44336" />
+
+                    <!-- Hạt dưa hấu -->
+                    <circle cx="90" cy="110" r="3" fill="#000000" />
+                    <circle cx="95" cy="120" r="3" fill="#000000" />
+                    <circle cx="85" cy="115" r="3" fill="#000000" />
+                    <circle cx="110" cy="110" r="3" fill="#000000" />
+                    <circle cx="105" cy="120" r="3" fill="#000000" />
+                    <circle cx="115" cy="115" r="3" fill="#000000" />
+
+                    <!-- Cỏ xung quanh quả dưa hấu -->
+                    <path d="M50,160 Q60,150 70,160" stroke="#388E3C" stroke-width="2" fill="none" />
+                    <path d="M130,160 Q140,150 150,160" stroke="#388E3C" stroke-width="2" fill="none" />
+                    <path d="M80,170 Q90,160 100,170" stroke="#388E3C" stroke-width="2" fill="none" />
+                    <path d="M120,170 Q110,160 100,170" stroke="#388E3C" stroke-width="2" fill="none" />
+                    
+                    <!-- Lá nhỏ -->
+                    <ellipse cx="40" cy="140" rx="8" ry="5" fill="#388E3C" />
+                    <ellipse cx="160" cy="140" rx="8" ry="5" fill="#388E3C" />
+
+                    <!-- Những chi tiết trang trí xung quanh -->
+                    <circle cx="70" cy="80" r="4" fill="#4CAF50" />
+                    <circle cx="130" cy="80" r="4" fill="#4CAF50" />
+                    <circle cx="50" cy="120" r="4" fill="#4CAF50" />
+                    <circle cx="150" cy="120" r="4" fill="#4CAF50" />
+                </svg>
+                `;
+                break;
+            case 'muskmelon':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Vỏ dưa lưới -->
+                    <ellipse cx="100" cy="100" rx="70" ry="55" fill="#FFEB3B" stroke="#FBC02D" stroke-width="5" />
+
+                    <!-- Vệt vỏ dưa lưới -->
+                    <path d="M100,40 Q85,70 100,100 Q115,70 100,40" fill="none" stroke="#FBC02D" stroke-width="4" />
+                    <path d="M100,40 Q110,60 100,100 Q90,60 100,40" fill="none" stroke="#FBC02D" stroke-width="4" />
+                    <path d="M100,160 Q85,130 100,100 Q115,130 100,160" fill="none" stroke="#FBC02D" stroke-width="4" />
+                    <path d="M100,160 Q110,140 100,100 Q90,140 100,160" fill="none" stroke="#FBC02D" stroke-width="4" />
+
+                    <!-- Phần ruột dưa lưới -->
+                    <ellipse cx="100" cy="100" rx="55" ry="40" fill="#FF7043" />
+
+                    <!-- Hạt dưa lưới -->
+                    <circle cx="90" cy="110" r="3" fill="#FFFFFF" />
+                    <circle cx="95" cy="120" r="3" fill="#FFFFFF" />
+                    <circle cx="85" cy="115" r="3" fill="#FFFFFF" />
+                    <circle cx="110" cy="110" r="3" fill="#FFFFFF" />
+                    <circle cx="105" cy="120" r="3" fill="#FFFFFF" />
+                    <circle cx="115" cy="115" r="3" fill="#FFFFFF" />
+
+                    <!-- Cỏ xung quanh quả dưa lưới -->
+                    <path d="M50,160 Q60,150 70,160" stroke="#388E3C" stroke-width="2" fill="none" />
+                    <path d="M130,160 Q140,150 150,160" stroke="#388E3C" stroke-width="2" fill="none" />
+                    <path d="M80,170 Q90,160 100,170" stroke="#388E3C" stroke-width="2" fill="none" />
+                    <path d="M120,170 Q110,160 100,170" stroke="#388E3C" stroke-width="2" fill="none" />
+                    
+                    <!-- Lá nhỏ -->
+                    <ellipse cx="40" cy="140" rx="8" ry="5" fill="#388E3C" />
+                    <ellipse cx="160" cy="140" rx="8" ry="5" fill="#388E3C" />
+
+                    <!-- Những chi tiết trang trí xung quanh -->
+                    <circle cx="70" cy="80" r="4" fill="#FFEB3B" />
+                    <circle cx="130" cy="80" r="4" fill="#FFEB3B" />
+                    <circle cx="50" cy="120" r="4" fill="#FFEB3B" />
+                    <circle cx="150" cy="120" r="4" fill="#FFEB3B" />
+                </svg>
+                `;
+                break;
+            case 'apple':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Thân cây -->
+                    <path d="M100,180 L100,80" stroke="#8B4513" stroke-width="6" fill="none" />
+
+                    <!-- Cành -->
+                    <path d="M100,120 C90,110 80,100 75,90" stroke="#8B4513" stroke-width="4" fill="none" />
+                    <path d="M100,120 C110,110 120,100 125,90" stroke="#8B4513" stroke-width="4" fill="none" />
+
+                    <!-- Lá -->
+                    <ellipse cx="85" cy="100" rx="8" ry="6" fill="#4CAF50" />
+                    <ellipse cx="115" cy="100" rx="8" ry="6" fill="#4CAF50" />
+                    <ellipse cx="75" cy="120" rx="8" ry="6" fill="#4CAF50" />
+                    <ellipse cx="125" cy="120" rx="8" ry="6" fill="#4CAF50" />
+
+                    <!-- Quả táo -->
+                    <circle cx="100" cy="70" r="20" fill="#FF5722"/>
+                    
+                    <!-- Chi tiết quả táo -->
+                    <path d="M90,70 Q100,60 110,70 Q100,80 90,70 Z" fill="#FF7043"/>
+                </svg>
+                `;
+                break;
+            case 'orange':
+            svgContainer.innerHTML = `
+            <svg viewBox="0 0 200 200" width="150" height="150">
+                <!-- Thân cây -->
+                <path d="M100,180 C95,150 90,120 100,90 C110,120 115,150 100,180" stroke="#6b8e23" stroke-width="6" fill="none" />
+                
+                <!-- Cành cây -->
+                <path d="M100,120 C85,100 75,90 85,80" stroke="#6b8e23" stroke-width="4" fill="none" />
+                <path d="M100,120 C115,100 125,90 115,80" stroke="#6b8e23" stroke-width="4" fill="none" />
+
+                <!-- Lá cây -->
+                <ellipse cx="85" cy="80" rx="10" ry="15" fill="#388E3C" />
+                <ellipse cx="115" cy="80" rx="10" ry="15" fill="#388E3C" />
+
+                <!-- Quả cam -->
+                <circle cx="100" cy="60" r="30" fill="#FF9800" stroke="#F57C00" stroke-width="4" />
+
+                <!-- Cuống cam -->
+                <path d="M100,30 Q105,20 110,30" fill="none" stroke="#5D4037" stroke-width="4" />
+                
+                <!-- Lá cam -->
+                <ellipse cx="100" cy="40" rx="10" ry="15" fill="#388E3C" />
+                <path d="M100,40 Q95,45 90,50" fill="none" stroke="#388E3C" stroke-width="2" />
+                <path d="M100,40 Q105,45 110,50" fill="none" stroke="#388E3C" stroke-width="2" />
+
+                <!-- Chi tiết ánh sáng phản chiếu trên cam -->
+                <ellipse cx="120" cy="60" rx="10" ry="6" fill="white" opacity="0.3" />
+                <ellipse cx="80" cy="60" rx="10" ry="6" fill="white" opacity="0.3" />
+            </svg>
+            `;
+                break;
+            case 'papaya':
+            svgContainer.innerHTML = `
+            <svg viewBox="0 0 200 200" width="150" height="150">
+                <!-- Thân cây -->
+                <path d="M100,180 C95,150 90,120 100,90 C110,120 115,150 100,180" stroke="#8B4513" stroke-width="6" fill="none" />
+
+                <!-- Cành cây -->
+                <path d="M100,120 C85,100 75,90 85,80" stroke="#8B4513" stroke-width="4" fill="none" />
+                <path d="M100,120 C115,100 125,90 115,80" stroke="#8B4513" stroke-width="4" fill="none" />
+
+                <!-- Lá cây -->
+                <path d="M85,80 C90,70 75,55 70,65" stroke="#388E3C" stroke-width="3" fill="#388E3C" />
+                <path d="M115,80 C110,70 125,55 130,65" stroke="#388E3C" stroke-width="3" fill="#388E3C" />
+                <path d="M100,60 C105,50 95,40 100,35" stroke="#388E3C" stroke-width="3" fill="#388E3C" />
+
+                <!-- Quả đu đủ -->
+                <ellipse cx="100" cy="60" rx="30" ry="20" fill="#FFB74D" stroke="#FF9800" stroke-width="4" />
+                <path d="M90,60 Q100,50 110,60" fill="none" stroke="#FF9800" stroke-width="4" />
+                <path d="M90,70 Q100,60 110,70" fill="none" stroke="#FF9800" stroke-width="4" />
+
+                <!-- Cuống quả -->
+                <path d="M100,35 Q95,25 100,20" fill="none" stroke="#8B4513" stroke-width="4" />
+                
+                <!-- Các chi tiết lá -->
+                <path d="M75,85 Q80,90 85,85" fill="none" stroke="#388E3C" stroke-width="2" />
+                <path d="M115,85 Q110,90 105,85" fill="none" stroke="#388E3C" stroke-width="2" />
+                
+                <!-- Đất và cỏ -->
+                <path d="M70,180 Q85,170 100,180 Q115,170 130,180" fill="#4CAF50" />
+            </svg>
+            `;
+                break;
+            case 'coconut':
+            svgContainer.innerHTML = `
+            <svg viewBox="0 0 200 200" width="150" height="150">
+                <!-- Thân cây -->
+                <path d="M100,180 C95,150 90,120 100,90 C110,120 115,150 100,180" stroke="#8B4513" stroke-width="8" fill="none" />
+
+                <!-- Cành dừa -->
+                <path d="M100,90 C80,70 60,50 70,30" stroke="#228B22" stroke-width="6" fill="none" />
+                <path d="M100,90 C120,70 140,50 130,30" stroke="#228B22" stroke-width="6" fill="none" />
+                <path d="M100,90 C95,60 105,40 100,20" stroke="#228B22" stroke-width="6" fill="none" />
+
+                <!-- Lá dừa -->
+                <path d="M70,30 Q60,10 50,0" stroke="#228B22" stroke-width="4" fill="none" />
+                <path d="M130,30 Q140,10 150,0" stroke="#228B22" stroke-width="4" fill="none" />
+                <path d="M100,20 Q110,0 120,0" stroke="#228B22" stroke-width="4" fill="none" />
+
+                <!-- Quả dừa (3 quả) với màu nâu -->
+                <ellipse cx="100" cy="130" rx="18" ry="24" fill="#8B4513" stroke="#6b3d2f" stroke-width="4" />
+                <ellipse cx="80" cy="140" rx="18" ry="24" fill="#8B4513" stroke="#6b3d2f" stroke-width="4" />
+                <ellipse cx="120" cy="140" rx="18" ry="24" fill="#8B4513" stroke="#6b3d2f" stroke-width="4" />
+                
+                <!-- Dây nối quả dừa màu nâu -->
+                <path d="M100,90 C100,100 95,105 100,110" fill="none" stroke="#8B4513" stroke-width="4" />
+                <path d="M80,100 C80,110 75,115 80,120" fill="none" stroke="#8B4513" stroke-width="4" />
+                <path d="M120,100 C120,110 125,115 120,120" fill="none" stroke="#8B4513" stroke-width="4" />
+
+                <!-- Cỏ và đất -->
+                <path d="M70,180 Q85,170 100,180 Q115,170 130,180" fill="#4CAF50" />
+            </svg>
+            `;
+                break;
+            case 'cotton':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                    <!-- Thân cây bông -->
+                    <path d="M100,180 C95,140 90,100 100,70 C110,100 115,140 100,180" stroke="#8B4513" stroke-width="6" fill="none" />
+
+                    <!-- Cành bông -->
+                    <path d="M100,120 C85,110 75,100 70,90" stroke="#8B4513" stroke-width="4" fill="none" />
+                    <path d="M100,120 C115,110 125,100 130,90" stroke="#8B4513" stroke-width="4" fill="none" />
+
+                    <!-- Lá cây bông -->
+                    <ellipse cx="80" cy="100" rx="12" ry="8" fill="#228B22" />
+                    <ellipse cx="120" cy="100" rx="12" ry="8" fill="#228B22" />
+                    <ellipse cx="70" cy="120" rx="12" ry="8" fill="#228B22" />
+                    <ellipse cx="130" cy="120" rx="12" ry="8" fill="#228B22" />
+                    <ellipse cx="90" cy="140" rx="12" ry="8" fill="#228B22" />
+                    <ellipse cx="110" cy="140" rx="12" ry="8" fill="#228B22" />
+                    
+                    <!-- Hoa bông (Cotton Flowers) -->
+                    <circle cx="70" cy="60" r="10" fill="#fff" stroke="#dcdcdc" stroke-width="2" />
+                    <circle cx="130" cy="60" r="10" fill="#fff" stroke="#dcdcdc" stroke-width="2" />
+                    <circle cx="100" cy="50" r="10" fill="#fff" stroke="#dcdcdc" stroke-width="2" />
+
+                    <!-- Cánh hoa bông -->
+                    <path d="M70,60 Q65,50 60,55 Q65,60 70,60" fill="#fff" stroke="#dcdcdc" stroke-width="2"/>
+                    <path d="M130,60 Q135,50 140,55 Q135,60 130,60" fill="#fff" stroke="#dcdcdc" stroke-width="2"/>
+                    <path d="M100,50 Q95,40 90,45 Q95,50 100,50" fill="#fff" stroke="#dcdcdc" stroke-width="2"/>
+
+                    <!-- Quả bông -->
+                    <ellipse cx="70" cy="60" rx="14" ry="10" fill="#e6e6e6" />
+                    <ellipse cx="130" cy="60" rx="14" ry="10" fill="#e6e6e6" />
+                    <ellipse cx="100" cy="50" rx="14" ry="10" fill="#e6e6e6" />
+
+                    <!-- Cỏ dưới cây bông -->
+                    <path d="M70,180 Q85,170 100,180 Q115,170 130,180" fill="#4CAF50" />
+                </svg>
+                `;
+                break;
+            case 'jute':
+                svgContainer.innerHTML = `
+                <svg viewBox="0 0 200 200" width="150" height="150">
+                <!-- Thân cây jute -->
+                <path d="M100,180 L100,40" stroke="#6b8e23" stroke-width="4" fill="none" />
+
+                <!-- Lá đối xứng dọc thân cây -->
+                <path d="M100,50 C90,45 80,45 75,50" stroke="#388e3c" stroke-width="2" fill="none" />
+                <path d="M100,50 C110,45 120,45 125,50" stroke="#388e3c" stroke-width="2" fill="none" />
+                
+                <path d="M100,70 C90,65 80,65 75,70" stroke="#388e3c" stroke-width="2" fill="none" />
+                <path d="M100,70 C110,65 120,65 125,70" stroke="#388e3c" stroke-width="2" fill="none" />
+                
+                <path d="M100,90 C90,85 80,85 75,90" stroke="#388e3c" stroke-width="2" fill="none" />
+                <path d="M100,90 C110,85 120,85 125,90" stroke="#388e3c" stroke-width="2" fill="none" />
+                
+                <path d="M100,110 C90,105 80,105 75,110" stroke="#388e3c" stroke-width="2" fill="none" />
+                <path d="M100,110 C110,105 120,105 125,110" stroke="#388e3c" stroke-width="2" fill="none" />
+
+                <path d="M100,130 C90,125 80,125 75,130" stroke="#388e3c" stroke-width="2" fill="none" />
+                <path d="M100,130 C110,125 120,125 125,130" stroke="#388e3c" stroke-width="2" fill="none" />
+
+                <!-- Chóp cây -->
+                <path d="M100,40 Q98,35 100,30 Q102,35 100,40" fill="#4caf50" stroke="#2e7d32" stroke-width="1" />
+
+                <!-- Mặt đất -->
+                <path d="M70,180 Q85,170 100,180 Q115,170 130,180" fill="#4CAF50" />
+                </svg>
+                `;
+                break;
             default:
                 // Generic plant SVG
                 svgContainer.innerHTML = `
                 <svg viewBox="0 0 200 200" width="150" height="150">
-                    <!-- Plant stem -->
-                    <path d="M100,180 L100,80" stroke="#4a8f29" stroke-width="3" />
-                    
-                    <!-- Leaves -->
-                    <path d="M100,140 C120,120 140,130 150,110" stroke="#4a8f29" stroke-width="2" fill="none" />
-                    <path d="M100,140 C80,120 60,130 50,110" stroke="#4a8f29" stroke-width="2" fill="none" />
-                    <path d="M100,120 C125,100 135,110 145,90" stroke="#4a8f29" stroke-width="2" fill="none" />
-                    <path d="M100,120 C75,100 65,110 55,90" stroke="#4a8f29" stroke-width="2" fill="none" />
-                    
-                    <!-- Plant head/flower -->
-                    <circle cx="100" cy="60" r="20" fill="#a1c349" />
-                    <circle cx="100" cy="60" r="15" fill="#b1d359" />
-                    <circle cx="100" cy="60" r="10" fill="#c1e369" />
+                <!-- Thân cây -->
+                <path d="M100,180 L100,90" stroke="#6d4c41" stroke-width="5" />
+
+                <!-- Cành cây -->
+                <path d="M100,120 C80,110 70,100 60,90" stroke="#6d4c41" stroke-width="3" fill="none" />
+                <path d="M100,120 C120,110 130,100 140,90" stroke="#6d4c41" stroke-width="3" fill="none" />
+                <path d="M100,100 C85,90 75,85 65,80" stroke="#6d4c41" stroke-width="2" fill="none" />
+                <path d="M100,100 C115,90 125,85 135,80" stroke="#6d4c41" stroke-width="2" fill="none" />
+
+                <!-- Lá cây -->
+                <ellipse cx="65" cy="90" rx="10" ry="5" fill="#2e7d32" />
+                <ellipse cx="75" cy="80" rx="10" ry="5" fill="#2e7d32" />
+                <ellipse cx="135" cy="90" rx="10" ry="5" fill="#2e7d32" />
+                <ellipse cx="125" cy="80" rx="10" ry="5" fill="#2e7d32" />
+                <ellipse cx="60" cy="85" rx="10" ry="5" fill="#2e7d32" />
+                <ellipse cx="140" cy="85" rx="10" ry="5" fill="#2e7d32" />
+
+                <!-- Quả cà phê (cherry đỏ) -->
+                <circle cx="70" cy="85" r="4" fill="#b71c1c" />
+                <circle cx="130" cy="85" r="4" fill="#b71c1c" />
+                <circle cx="75" cy="78" r="4" fill="#b71c1c" />
+                <circle cx="125" cy="78" r="4" fill="#b71c1c" />
+
+                <!-- Đất -->
+                <ellipse cx="100" cy="180" rx="30" ry="5" fill="#8d6e63" />
                 </svg>
                 `;
         }

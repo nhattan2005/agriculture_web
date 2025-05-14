@@ -17,14 +17,14 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="nitrogen" class="form-label">Nitrogen (N) - kg/ha</label>
-                                <input type="number" step="0.01" class="form-control" id="nitrogen" name="nitrogen" 
+                                <input type="number" step="any" class="form-control" id="nitrogen" name="nitrogen" 
                                        required min="0" max="150" value="{{ input_data.nitrogen if input_data else '' }}">
                                 <div class="form-text">Typical range: 0-140 kg/ha</div>
                             </div>
                             
                             <div class="col-md-6 mb-3">
                                 <label for="phosphorus" class="form-label">Phosphorus (P) - kg/ha</label>
-                                <input type="number" step="0.01" class="form-control" id="phosphorus" name="phosphorus" 
+                                <input type="number" step="any" class="form-control" id="phosphorus" name="phosphorus" 
                                        required min="0" max="150" value="{{ input_data.phosphorus if input_data else '' }}">
                                 <div class="form-text">Typical range: 5-145 kg/ha</div>
                             </div>
@@ -33,14 +33,14 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="potassium" class="form-label">Potassium (K) - kg/ha</label>
-                                <input type="number" step="0.01" class="form-control" id="potassium" name="potassium" 
+                                <input type="number" step="any" class="form-control" id="potassium" name="potassium" 
                                        required min="0" max="150" value="{{ input_data.potassium if input_data else '' }}">
                                 <div class="form-text">Typical range: 5-205 kg/ha</div>
                             </div>
                             
                             <div class="col-md-6 mb-3">
                                 <label for="temperature" class="form-label">Temperature (°C)</label>
-                                <input type="number" step="0.1" class="form-control" id="temperature" name="temperature" 
+                                <input type="number" step="any" class="form-control" id="temperature" name="temperature" 
                                        required min="-10" max="50" value="{{ input_data.temperature if input_data else '' }}">
                                 <div class="form-text">Typical range: 8-44 °C</div>
                             </div>
@@ -49,14 +49,14 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="humidity" class="form-label">Humidity (%)</label>
-                                <input type="number" step="0.1" class="form-control" id="humidity" name="humidity" 
+                                <input type="number" step="any" class="form-control" id="humidity" name="humidity" 
                                        required min="0" max="100" value="{{ input_data.humidity if input_data else '' }}">
                                 <div class="form-text">Typical range: 14-100 %</div>
                             </div>
                             
                             <div class="col-md-6 mb-3">
                                 <label for="ph" class="form-label">pH Value</label>
-                                <input type="number" step="0.01" class="form-control" id="ph" name="ph" 
+                                <input type="number" step="any" class="form-control" id="ph" name="ph" 
                                        required min="0" max="14" value="{{ input_data.ph if input_data else '' }}">
                                 <div class="form-text">Typical range: 3.5-10 pH</div>
                             </div>
@@ -64,7 +64,7 @@
                         
                         <div class="mb-3">
                             <label for="rainfall" class="form-label">Rainfall (mm)</label>
-                            <input type="number" step="0.1" class="form-control" id="rainfall" name="rainfall" 
+                            <input type="number" step="any" class="form-control" id="rainfall" name="rainfall" 
                                    required min="0" max="3000" value="{{ input_data.rainfall if input_data else '' }}">
                             <div class="form-text">Typical range: 20-3000 mm</div>
                         </div>
@@ -79,7 +79,7 @@
             </div>
         </div>
         
-        <div class="col-md-6">
+  <div class="col-md-6">
             <div class="card result-card">
                 <div class="card-body">
                     <h3 class="card-title">Recommendation Results</h3>
@@ -202,6 +202,20 @@
             "{{ model_name }}": "{{ model_prediction }}",
             {% endfor %}
         };
+        
+        // Create vote counts for visualization
+        {% if vote_counts %}
+        const voteCounts = {
+            {% for crop, count in vote_counts.items() %}
+            "{{ crop }}": {{ count }},
+            {% endfor %}
+        };
+        
+        // Create detailed vote distribution chart
+        createDetailedModelComparisonChart('voteDistributionChart', modelPredictions, voteCounts, '{{ prediction }}');
+        {% endif %}
+        
+        // Create model comparison chart
         createModelComparisonChart('modelPredictionsChart', modelPredictions, '{{ prediction }}');
         {% endif %}
         {% endif %}

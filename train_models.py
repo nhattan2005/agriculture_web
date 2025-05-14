@@ -6,7 +6,7 @@ This is a command-line utility to train models with the provided dataset
 import os
 import sys
 import logging
-from train import train_and_save_models
+from models.train_models import train_and_save_models
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

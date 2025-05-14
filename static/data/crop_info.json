@@ -370,5 +370,377 @@
       "Traditional medicine"
     ],
     "marketValue": "Banana prices typically range from $300-700 per ton depending on variety, quality, and market conditions."
+  },
+  {
+    "name": "mango",
+    "description": "Mango is one of the most important and widely cultivated fruits of the tropical world. It is native to South Asia and has been cultivated for thousands of years in the Indian subcontinent. The fruit is prized for its sweet flavor and high nutritional value.",
+    "nutrients": {
+      "fats": 0.4,
+      "proteins": 0.8,
+      "carbs": 15.0
+    },
+    "growingConditions": {
+      "temperature": "24-30°C",
+      "humidity": "50-80%",
+      "ph": "5.5-7.5",
+      "rainfall": "750-2500mm"
+    },
+    "soilRequirements": "Mangoes prefer deep, well-drained loamy soils with good fertility. They can tolerate a wide range of soil types but not waterlogging or highly alkaline conditions.",
+    "npkRequirements": {
+      "n": 70,
+      "p": 50,
+      "k": 100
+    },
+    "growingSeason": "Mangoes are perennial trees that typically flower in early spring and bear fruit in summer. Trees begin bearing fruit after 3-5 years.",
+    "yield": "A mature mango tree can yield 200-300 kg of fruit annually depending on variety and cultivation practices.",
+    "uses": [
+      "Fresh fruit consumption",
+      "Juices and smoothies",
+      "Preserves and chutneys",
+      "Dried fruit",
+      "Culinary ingredient"
+    ],
+    "marketValue": "Mango prices typically range from $800-2000 per ton depending on variety, quality, and market conditions."
+  },
+  {
+    "name": "grapes",
+    "description": "Grapes are a non-climacteric fruit that grow on woody vines of the genus Vitis. They can be eaten fresh as table grapes, used for making wine, jam, grape juice, jelly, grape seed extract, vinegar, and grape seed oil.",
+    "nutrients": {
+      "fats": 0.3,
+      "proteins": 0.7,
+      "carbs": 17.0
+    },
+    "growingConditions": {
+      "temperature": "15-25°C",
+      "humidity": "60-70%",
+      "ph": "6.0-7.0",
+      "rainfall": "600-900mm"
+    },
+    "soilRequirements": "Grapes grow best in deep, well-drained soils with good organic matter content. They prefer loamy or sandy loam soils with good drainage.",
+    "npkRequirements": {
+      "n": 55,
+      "p": 65,
+      "k": 85
+    },
+    "growingSeason": "Grapes are perennial vines that typically begin producing fruit in their third year. The growing season varies by region, but generally runs from spring through fall.",
+    "yield": "A mature vineyard can yield 8-12 tons per hectare depending on variety and cultivation practices.",
+    "uses": [
+      "Fresh consumption as table grapes",
+      "Wine production",
+      "Juice and jellies",
+      "Raisins (dried grapes)",
+      "Vinegar production"
+    ],
+    "marketValue": "Grape prices typically range from $700-3000 per ton depending on variety, quality, and whether for table or wine production."
+  },
+  {
+    "name": "watermelon",
+    "description": "Watermelon is a flowering plant species of the Cucurbitaceae family and the name of its edible fruit. It is a highly cultivated fruit worldwide, with more than 1,000 varieties. Watermelon is a sweet and refreshing low-calorie summer snack.",
+    "nutrients": {
+      "fats": 0.2,
+      "proteins": 0.6,
+      "carbs": 7.6
+    },
+    "growingConditions": {
+      "temperature": "18-35°C",
+      "humidity": "40-60%",
+      "ph": "6.0-6.8",
+      "rainfall": "500-600mm"
+    },
+    "soilRequirements": "Watermelons grow best in light, well-drained, sandy loam soils with good organic matter content. They do not tolerate heavy, clayey soils or waterlogged conditions.",
+    "npkRequirements": {
+      "n": 80,
+      "p": 20,
+      "k": 30
+    },
+    "growingSeason": "Watermelons are warm-season annuals typically planted after all danger of frost has passed. From planting to harvest typically takes 80-110 days.",
+    "yield": "Average yield is about 20-30 tons per hectare depending on variety and cultivation practices.",
+    "uses": [
+      "Fresh fruit consumption",
+      "Juices and smoothies",
+      "Pickled rinds",
+      "Seeds can be roasted and eaten",
+      "Used in salads"
+    ],
+    "marketValue": "Watermelon prices typically range from $200-400 per ton depending on quality and market conditions."
+  },
+  {
+    "name": "muskmelon",
+    "description": "Muskmelon (Cucumis melo) is a species of melon that includes cantaloupe, honeydew, and several other varieties. It is known for its sweet taste and aromatic flesh that ranges from pale green to deep orange.",
+    "nutrients": {
+      "fats": 0.3,
+      "proteins": 0.8,
+      "carbs": 8.0
+    },
+    "growingConditions": {
+      "temperature": "18-35°C",
+      "humidity": "40-60%",
+      "ph": "6.0-6.8",
+      "rainfall": "450-600mm"
+    },
+    "soilRequirements": "Muskmelons prefer well-drained, sandy loam soils rich in organic matter. They do not tolerate heavy clay soils or waterlogged conditions.",
+    "npkRequirements": {
+      "n": 70,
+      "p": 25,
+      "k": 60
+    },
+    "growingSeason": "Muskmelons are warm-season annuals that are planted after all danger of frost has passed. The growing period is about 70-90 days from planting to harvest.",
+    "yield": "Average yield is about 15-25 tons per hectare depending on variety and cultivation practices.",
+    "uses": [
+      "Fresh fruit consumption",
+      "Juices and smoothies",
+      "Salads and desserts",
+      "Seeds can be dried and eaten",
+      "Used in various culinary preparations"
+    ],
+    "marketValue": "Muskmelon prices typically range from $300-700 per ton depending on variety, quality, and market conditions."
+  },
+  {
+    "name": "mango",
+    "description": "Mango is one of the most important and widely cultivated fruits of the tropical world. It is native to South Asia and has been cultivated for thousands of years in the Indian subcontinent. The fruit is prized for its sweet flavor and high nutritional value.",
+    "nutrients": {
+      "fats": 0.4,
+      "proteins": 0.8,
+      "carbs": 15.0
+    },
+    "growingConditions": {
+      "temperature": "24-30°C",
+      "humidity": "50-80%",
+      "ph": "5.5-7.5",
+      "rainfall": "750-2500mm"
+    },
+    "soilRequirements": "Mangoes prefer deep, well-drained loamy soils with good fertility. They can tolerate a wide range of soil types but not waterlogging or highly alkaline conditions.",
+    "npkRequirements": {
+      "n": 70,
+      "p": 50,
+      "k": 100
+    },
+    "growingSeason": "Mangoes are perennial trees that typically flower in early spring and bear fruit in summer. Trees begin bearing fruit after 3-5 years.",
+    "yield": "A mature mango tree can yield 200-300 kg of fruit annually depending on variety and cultivation practices.",
+    "uses": [
+      "Fresh fruit consumption",
+      "Juices and smoothies",
+      "Preserves and chutneys",
+      "Dried fruit",
+      "Culinary ingredient"
+    ],
+    "marketValue": "Mango prices typically range from $800-2000 per ton depending on variety, quality, and market conditions."
+  },
+  {
+    "name": "apple",
+    "description": "Apple (Malus domestica) is one of the most widely cultivated and consumed fruits globally. Originating from Central Asia, apples have been grown for thousands of years in Asia and Europe. They are renowned for their crisp texture, sweet to tart flavor, and significant nutritional value.",
+    "nutrients": {
+      "fats": 0.2,
+      "proteins": 0.3,
+      "carbs": 13.4
+    },
+    "growingConditions": {
+      "temperature": "20-25°C",
+      "humidity": "50-80%",
+      "ph": "6.0-7.0",
+      "rainfall": "1000-1300mm"
+    },
+    "soilRequirements": "Apples thrive in well-drained, deep loamy soils rich in organic matter. The optimal soil pH ranges from 6.0 to 7.0. Soils should have good aeration and fertility, avoiding waterlogging conditions.",
+    "npkRequirements": {
+      "n": 50,
+      "p": 8.5,
+      "k": 90
+    },
+    "growingSeason": "Apple trees require a chilling period of approximately 1000 hours below 7°C to break dormancy. Flowering occurs in early spring, with fruit maturing in late summer to autumn. Trees typically begin bearing fruit after 3-5 years.",
+    "yield": "A mature apple tree can yield between 100 to 300 kg of fruit annually, depending on the variety and cultivation practices.",
+    "uses": [
+      "Fresh fruit consumption",
+      "Juices and ciders",
+      "Baking and cooking",
+      "Dried fruit",
+      "Vinegar and preserves"
+    ],
+    "marketValue": "Apple prices vary based on variety, quality, and market conditions, typically ranging from $600 to $1500 per ton."
+  },
+  {
+    "name": "orange",
+    "description": "Orange (*Citrus sinensis*) is a globally cultivated citrus fruit, renowned for its sweet flavor and high vitamin C content. Originating from Southeast Asia, it is now widely grown in tropical and subtropical regions, playing a significant role in global agriculture.",
+    "nutrients": {
+      "fats": 0.1,
+      "proteins": 0.9,
+      "carbs": 12.0
+    },
+    "growingConditions": {
+      "temperature": "15–30°C",
+      "humidity": "50–80%",
+      "ph": "6.0–7.5",
+      "rainfall": "1000–1500mm"
+    },
+    "soilRequirements": "Oranges thrive in well-drained, deep loamy soils with a pH between 6.0 and 7.5. Sandy loam or loamy soils are ideal. Proper drainage is essential to prevent root diseases.",
+    "npkRequirements": {
+      "n": 60,
+      "p": 40,
+      "k": 80
+    },
+    "growingSeason": "Orange trees are typically planted in spring or early summer. They begin bearing fruit 3–5 years after planting, with harvesting occurring in late autumn to winter, depending on the variety and region.",
+    "yield": "A mature orange tree can yield approximately 200–400 fruits per season. With optimal care, yields can reach up to 600 fruits per tree annually.",
+    "uses": [
+      "Fresh fruit consumption",
+      "Juices and concentrates",
+      "Marmalades and preserves",
+      "Essential oils",
+      "Culinary applications"
+    ],
+    "marketValue": "Orange prices vary based on variety, quality, and market conditions, typically ranging from $500 to $1500 per ton."
+  },
+    {
+    "name": "papaya",
+    "description": "Papaya (*Carica papaya*) is a fast-growing tropical fruit tree native to Central America, now widely cultivated in tropical and subtropical regions worldwide. Known for its sweet, orange-fleshed fruit rich in vitamins A and C, papaya is valued for both its nutritional and medicinal properties.",
+    "nutrients": {
+      "fats": 0.3,
+      "proteins": 0.5,
+      "carbs": 11.0
+    },
+    "growingConditions": {
+      "temperature": "21–33°C",
+      "humidity": "60–85%",
+      "ph": "6.0–6.5",
+      "rainfall": "1000–1500mm"
+    },
+    "soilRequirements": "Papaya thrives in well-drained, sandy loam soils rich in organic matter. The optimal soil pH ranges from 6.0 to 6.5. Waterlogging and salinity should be avoided, as papaya is sensitive to both conditions.",
+    "npkRequirements": {
+      "n": 200,
+      "p": 200,
+      "k": 400
+    },
+    "growingSeason": "Papaya can be cultivated year-round in tropical climates. The plants typically begin bearing fruit 6 to 10 months after planting, with peak production occurring in the second year. The economic lifespan of a papaya plantation is about 3 to 4 years.",
+    "yield": "A mature papaya tree can produce between 30 to 150 fruits annually, depending on the variety and cultivation practices. This equates to approximately 35 to 50 tons per hectare per year.",
+    "uses": [
+      "Fresh fruit consumption",
+      "Juices and smoothies",
+      "Jams and preserves",
+      "Papain enzyme extraction",
+      "Culinary ingredient in salads and desserts"
+    ],
+    "marketValue": "Papaya prices vary based on region, quality, and market demand, typically ranging from $300 to $800 per ton."
+  },
+    {
+    "name": "coconut",
+    "description": "Coconut (*Cocos nucifera*) is a tropical palm tree cultivated extensively in coastal and humid regions worldwide. Renowned for its versatility, the coconut provides food, oil, fiber, and timber. It thrives in sandy soils and is integral to the economies of many tropical countries.",
+    "nutrients": {
+      "fats": 33.5,
+      "proteins": 3.3,
+      "carbs": 15.2
+    },
+    "growingConditions": {
+      "temperature": "27–32°C",
+      "humidity": "70–80%",
+      "ph": "5.2–8.6",
+      "rainfall": "1200–2500mm"
+    },
+    "soilRequirements": "Coconut palms prefer well-drained sandy loam soils with good water-holding capacity. They tolerate a wide pH range (5.2–8.6) and can grow in coastal alluviums and river valleys. Proper drainage is essential to prevent root diseases.",
+    "npkRequirements": {
+      "n": 1000,
+      "p": 500,
+      "k": 2000
+    },
+    "growingSeason": "Coconuts can be planted year-round in tropical climates, with the onset of the rainy season being ideal. Trees begin bearing fruit 6–7 years after planting, with peak production occurring between 15–20 years.",
+    "yield": "A mature coconut tree typically yields 50–80 nuts per year. Under optimal conditions, yields can reach up to 100–150 nuts annually. Plantations with 150 trees per hectare can produce approximately 9,000 coconuts per year.",
+    "uses": [
+      "Fresh consumption",
+      "Coconut water and milk",
+      "Coconut oil production",
+      "Coir fiber extraction",
+      "Timber and construction materials"
+    ],
+    "marketValue": "Coconut prices vary based on product type and region, typically ranging from $300 to $800 per ton for raw nuts."
+  },
+  {
+    "name": "cotton",
+    "description": "Cotton is a soft, fluffy staple fiber that grows in a boll around the seeds of cotton plants of the genus Gossypium. It is a major cash crop and one of the most important textile fibers in the world.",
+    "nutrients": {
+      "fats": 0,
+      "proteins": 0,
+      "carbs": 0
+    },
+    "growingConditions": {
+      "temperature": "21-30°C",
+      "humidity": "40-70%",
+      "ph": "5.5-8.5",
+      "rainfall": "600-1200mm"
+    },
+    "soilRequirements": "Cotton grows best in deep, well-drained, sandy loam to clay loam soils with good organic matter content. It can tolerate moderate salinity and alkalinity.",
+    "npkRequirements": {
+      "n": 110,
+      "p": 25,
+      "k": 20
+    },
+    "growingSeason": "Cotton is typically planted in spring and harvested in fall. The growing period is about 150-180 days from planting to harvest.",
+    "yield": "Average yield is about 2-3 tons of seed cotton per hectare depending on variety and cultivation practices.",
+    "uses": [
+      "Textile production",
+      "Cotton seed oil extraction",
+      "Animal feed (cotton seed meal)",
+      "Medical supplies",
+      "Industrial products"
+    ],
+    "marketValue": "Cotton prices typically range from $1500-2500 per ton depending on quality, staple length, and market conditions."
+  },
+  {
+    "name": "jute",
+    "description": "Jute is a long, soft, shiny bast fiber that can be spun into coarse, strong threads. It is one of the most affordable natural fibers and is second only to cotton in production quantity. Jute is used chiefly to make cloth for wrapping bales, sacks, and coarse cloth.",
+    "nutrients": {
+      "fats": 0,
+      "proteins": 0,
+      "carbs": 0
+    },
+    "growingConditions": {
+      "temperature": "20-40°C",
+      "humidity": "60-90%",
+      "ph": "6.0-7.5",
+      "rainfall": "1000-2500mm"
+    },
+    "soilRequirements": "Jute grows best in alluvial soils with good water-holding capacity. It thrives in loamy to clayey loam soils with good organic matter content.",
+    "npkRequirements": {
+      "n": 100,
+      "p": 60,
+      "k": 60
+    },
+    "growingSeason": "Jute is typically grown during the rainy season (monsoon) in tropical regions. The growing period is about 120-150 days.",
+    "yield": "Average yield is about 2-3 tons of dry fiber per hectare depending on variety and cultivation practices.",
+    "uses": [
+      "Sacks and bags manufacturing",
+      "Carpet backing",
+      "Hessian cloth",
+      "Geotextiles",
+      "Composite materials"
+    ],
+    "marketValue": "Jute prices typically range from $400-700 per ton depending on quality and market conditions."
+  },
+  {
+    "name": "coffee",
+    "description": "Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain flowering plants in the Coffea genus. Coffee plants are cultivated in over 70 countries, primarily in the equatorial regions of the Americas, Southeast Asia, the Indian subcontinent, and Africa.",
+    "nutrients": {
+      "fats": 0.1,
+      "proteins": 0.1,
+      "carbs": 0.2
+    },
+    "growingConditions": {
+      "temperature": "15-25°C",
+      "humidity": "60-80%",
+      "ph": "6.0-6.5",
+      "rainfall": "1500-2500mm"
+    },
+    "soilRequirements": "Coffee grows best in well-drained, deep volcanic soils rich in organic matter. The soil should have good water-holding capacity but not be waterlogged.",
+    "npkRequirements": {
+      "n": 100,
+      "p": 30,
+      "k": 70
+    },
+    "growingSeason": "Coffee is a perennial crop. Trees begin bearing fruit after 3-5 years and remain productive for 20-30 years. Flowering typically occurs after the rainy season.",
+    "yield": "Average yield is about 1-2 tons of green coffee beans per hectare depending on variety and cultivation practices.",
+    "uses": [
+      "Beverage production",
+      "Culinary ingredient",
+      "Cosmetics",
+      "Traditional medicine",
+      "Biofuel research"
+    ],
+    "marketValue": "Coffee prices typically range from $2000-6000 per ton depending on variety (Arabica/Robusta), quality, and market conditions."
   }
 ]

@@ -5,63 +5,184 @@
 {% block page_title %}Your Agricultural Assistant{% endblock %}
 
 {% block content %}
-<div class="welcome-section">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card welcome-card">
-                <div class="card-body">
-                    <h2 class="card-title">Welcome to your Agriculture Decision Support System</h2>
-                    <p class="card-text">
-                        Our system helps farmers make informed decisions about which crops to plant based on 
-                        soil conditions and environmental factors. Get personalized recommendations and learn 
-                        more about different crop types.
-                    </p>
-                    <div class="actions mt-4">
-                        <a href="{{ url_for('predict') }}" class="btn btn-success">
-                            <i class="fas fa-chart-line"></i> Get Crop Recommendations
-                        </a>
-                        <a href="{{ url_for('crops') }}" class="btn btn-outline-success ms-2">
-                            <i class="fas fa-seedling"></i> Explore Crops Information
-                        </a>
-                    </div>
+<div class="row">
+    <!-- Cột trái -->
+    <div class="col-md-6 d-flex flex-column shadow-lg justify-content-between">
+        <!-- Box 1: Welcome -->
+        <div class="card welcome-card shadow-lg mb-3">
+            <div class="card-body">
+                <h2 class="card-title">Welcome to your Agriculture Decision Support System</h2>
+                <p class="card-text">
+                    Our system helps farmers make informed decisions about which crops to plant based on 
+                    soil conditions and environmental factors. Get personalized recommendations and learn 
+                    more about different crop types.
+                </p>
+                <div class="actions mt-4">
+                    <a href="{{ url_for('predict') }}" class="btn btn-success">
+                        <i class="fas fa-chart-line"></i> Get Crop Recommendations
+                    </a>
+                    <a href="{{ url_for('crops') }}" class="btn btn-outline-success ms-2">
+                        <i class="fas fa-seedling"></i> Explore Crops Information
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-6">
-            <div class="card info-card">
-                <div class="card-body">
-                    <h3 class="card-title">System Features</h3>
-                    <ul class="feature-list">
-                        <li>
-                            <i class="fas fa-microscope text-success"></i>
-                            <div>
-                                <h4>Soil Analysis</h4>
-                                <p>Enter your soil's NPK values and pH level to get accurate recommendations</p>
+        <!-- Box 2: Icons -->
+    <div class="card icon-card p-3 no-border shadow-lg" style="background-color: #f8f9fa;">
+        <div class="card-body">
+            <div class="d-flex flex-wrap gap-5 justify-content-center text-success"> <!-- Center icons and add gap -->
+                <div class="text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Information about plants and their care">
+                    <i class="fas fa-seedling fa-5x hover-shadow" style="transition: transform 0.3s ease;"></i>
+                    <div class="mt-2">Plant</div>
+                </div>
+                <div class="text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Tractors for farming tasks and maintenance">
+                    <i class="fas fa-tractor fa-5x hover-shadow" style="transition: transform 0.3s ease;"></i>
+                    <div class="mt-2">Tractor</div>
+                </div>
+                <div class="text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="AI models to predict crop outcomes">
+                    <i class="fas fa-laptop-code fa-5x hover-shadow" style="transition: transform 0.3s ease;"></i>
+                    <div class="mt-2">AI Model</div>
+                </div>
+                <div class="text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Soil types and their impact on crops">
+                    <i class="fas fa-mountain fa-5x hover-shadow" style="transition: transform 0.3s ease;"></i>
+                    <div class="mt-2">Soil</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom styles for hover effect -->
+<style>
+    .hover-shadow:hover {
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+    }
+    .icon-card {
+        border: 1px solid #e3e3e3; /* Border color */
+    }
+    
+    /* Tooltip custom style */
+    .tooltip-inner {
+        background-color: #333;
+        color: #fff;
+        font-size: 0.75rem;
+        padding: 6px 10px;
+        border-radius: 6px;
+        max-width: 220px;
+        text-align: center;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .bs-tooltip-top .tooltip-arrow::before {
+        border-top-color: #333;
+    }
+</style>
+<!-- Initialize Tooltips -->
+<script>
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+</script>
+    <!-- Cột phải: System Features -->
+    <div class="col-md-6">
+        <div class="card info-card shadow-lg h-100">
+            <div class="card-body">
+                <h3 class="card-title">System Features</h3>
+                <ul class="feature-list">
+                    <li>
+                        <i class="fas fa-microscope text-success"></i>
+                        <div>
+                            <h4>Soil Analysis</h4>
+                            <p>Enter your soil's NPK values and pH level to get accurate recommendations</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-cloud-sun-rain text-primary"></i>
+                        <div>
+                            <h4>Weather Conditions</h4>
+                            <p>Input temperature, humidity, and rainfall data for better predictions</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-brain text-warning"></i>
+                        <div>
+                            <h4>AI-Powered Recommendations</h4>
+                            <p>Our system uses machine learning to recommend the most suitable crops</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-book-open text-info"></i>
+                        <div>
+                            <h4>Crop Information</h4>
+                            <p>Access detailed information about various crops and their requirements</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card shadow-sm  border-0">
+            <div class="card-body">
+                <h3 class="card-title mb-4">
+                    <i class="fas fa-users text-primary me-2"></i> About Us
+                </h3>
+
+                <div class="row">
+                    <!-- Team Members -->
+                    <div class="col-md-4 shadow-lg mb-3">
+                        <div class="card border-0 bg-light h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-id-card text-success me-2"></i>Team Members
+                                </h5>
+                                <ul class="list-unstyled mt-3">
+                                    <li><i class="fas fa-user me-2 text-muted"></i> Phan Nhat Tan – <small>23521405</small></li>
+                                    <li><i class="fas fa-user me-2 text-muted"></i> Nguyen Van Hong Thai – <small>23521418</small></li>
+                                    <li><i class="fas fa-user me-2 text-muted"></i> Nguyen Huy Phuoc – <small>23521234</small></li>
+                                </ul>
                             </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-cloud-sun-rain text-primary"></i>
-                            <div>
-                                <h4>Weather Conditions</h4>
-                                <p>Input temperature, humidity, and rainfall data for better predictions</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Overview -->
+                    <div class="col-md-4 shadow-lg mb-3">
+                        <div class="card border-0 bg-light h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-project-diagram text-warning me-2"></i>Project Overview
+                                </h5>
+                                <p class="card-text mt-3">
+                                    Our <strong>Crop Recommendation System</strong> predicts the most suitable crops for specific soil and environmental conditions using machine learning models built from scratch. It provides reliable, science-based suggestions to support smarter agriculture.
+                                </p>
                             </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-brain text-warning"></i>
-                            <div>
-                                <h4>AI-Powered Recommendations</h4>
-                                <p>Our system uses machine learning to recommend the most suitable crops</p>
+                        </div>
+                    </div>
+
+                    <!-- Impact -->
+                    <div class="col-md-4 shadow-lg mb-3">
+                        <div class="card border-0 bg-light h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-seedling text-success me-2"></i>Impact
+                                </h5>
+                                <p class="card-text mt-3">
+                                    Our system empowers farmers by reducing uncertainty in crop selection, increasing productivity, and promoting sustainable farming through digital support tools tailored to local conditions.
+                                </p>
                             </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-book-open text-info"></i>
-                            <div>
-                                <h4>Crop Information</h4>
-                                <p>Access detailed information about various crops and their requirements</p>
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 text-center">
+                    <a href="{{ url_for('predict') }}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-chart-line me-2"></i> Go to Analytics
+                    </a>
                 </div>
             </div>
         </div>
