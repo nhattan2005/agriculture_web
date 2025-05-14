@@ -23,19 +23,6 @@ This is a web-based machine learning application that predicts the most suitable
   - `rainfall`: in mm
 - **Label**: Type of crop to recommend
 
-## 🌐 Website Pages
-
-1. **Home Page (`/`)**
-   - Introduction to the project
-   - Navigation to prediction and model pages
-
-2. **Prediction Page (`/predict`)**
-   - Input form for soil and climate parameters
-   - Displays the recommended crop
-
-3. **Model Page (`/model`)**
-   - Explains the model logic
-   - Shows dataset insights and evaluation metrics
 
 ## 🚀 How to Run the Project
 
