@@ -27,6 +27,5 @@ This is a web-based machine learning application that predicts the most suitable
 ## 🚀 How to Run the Project
 
 ```bash
-git clone https://github.com/your-username/crop-recommendation-system.git
-cd crop-recommendation-system
+git https://github.com/nhattan2005/agriculture_web.git
 python app.py
